@@ -1142,5 +1142,22 @@
     "acompte": 0,
     "paid": 0,
     "order": 1
+  },
+  {
+    "id": "task_1776611013412",
+    "title": "Acheter Classeurs couleurs bleu des classeurs couleurs rouge",
+    "aiAdvice": "",
+    "cat": "amenagement",
+    "type": "achat",
+    "priority": "basse",
+    "status": "todo",
+    "date": "",
+    "validated": 0,
+    "notes": "",
+    "url": "",
+    "image": "",
+    "devis": 0,
+    "acompte": 0,
+    "paid": 0
   }
 ]
