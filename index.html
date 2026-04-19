@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Douard Immobilier — Dashboard Projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #252848;
+    --red: #E43636;
+    --white: #FFFFFF;
+    --navy-light: #2f3460;
+    --navy-dark: #1a1d33;
+    --navy-subtle: rgba(37,40,72,0.06);
+    --red-light: rgba(228,54,54,0.12);
+    --gray: #6b7280;
+    --gray-light: #f4f5f7;
+    --border: #e5e7eb;
+    --shadow: 0 2px 12px rgba(37,40,72,0.10);
+    --shadow-lg: 0 8px 32px rgba(37,40,72,0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: #f0f1f5;
+    color: var(--navy);
+    min-height: 100vh;
+  }
+
+  /* LOGIN */
+  #login-screen {
+    position: fixed; inset: 0;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .login-logo { text-align: center; }
+  .login-logo .monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px; font-weight: 600;
+    color: var(--red);
+    line-height: 1;
+  }
+  .login-logo .brand-name {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; letter-spacing: 4px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .login-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 40px;
+    width: 320px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .login-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 400;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .login-card input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .login-card input:focus { border-color: var(--red); }
+  .login-card input::placeholder { color: rgba(255,255,255,0.3); }
+  .btn-login {
+    width: 100%;
+    padding: 13px;
+    background: var(--red);
+    color: var(--white);
+    border: none; border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px; font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-login:hover { background: #c42d2d; }
+  .login-error {
+    color: var(--red); font-size: 12px; text-align: center;
+    display: none;
+  }
+
+  /* APP */
+  #app { display: none; }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: 260px;
+    background: var(--navy);
+    display: flex; flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  .sidebar-header {
+    padding: 28px 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .sidebar-monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 600;
+    color: var(--red);
+    line-height: 1;
+  }
+  .sidebar-brand {
+    font-size: 10px; letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .sidebar-subtitle {
+    font-size: 11px; color: rgba(255,255,255,0.3);
+    margin-top: 2px;
+  }
+  .sidebar-nav { padding: 16px 12px; flex: 1; }
+  .nav-section-label {
+    font-size: 9px; letter-spacing: 2px;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    padding: 8px 12px 4px;
+  }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 2px;
+  }
+  .nav-item:hover { background: rgba(255,255,255,0.07); color: var(--white); }
+  .nav-item.active { background: rgba(228,54,54,0.15); color: var(--white); }
+  .nav-item .nav-icon { font-size: 15px; width: 20px; text-align: center; }
+  .nav-item .nav-count {
+    margin-left: auto;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    padding: 2px 7px; border-radius: 10px;
+  }
+  .nav-item.active .nav-count { background: var(--red); color: var(--white); }
+  .sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .btn-logout {
+    width: 100%;
+    padding: 9px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-logout:hover { border-color: var(--red); color: var(--red); }
+
+  /* MAIN */
+  .main {
+    margin-left: 260px;
+    padding: 32px;
+    min-height: 100vh;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 600;
+    color: var(--navy);
+  }
+  .page-title span { color: var(--red); font-style: italic; }
+  .topbar-actions { display: flex; gap: 10px; align-items: center; }
+  .btn-primary {
+    padding: 10px 20px;
+    background: var(--navy);
+    color: var(--white);
+    border: none; border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--navy-light); }
+  .btn-secondary {
+    padding: 10px 16px;
+    background: var(--white);
+    color: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--navy); }
+
+  /* STATS BAR */
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 28px;
+  }
+  .stat-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .stat-label {
+    font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .stat-value.red { color: var(--red); }
+  .stat-sub { font-size: 11px; color: var(--gray); margin-top: 4px; }
+  .stat-bar-bg {
+    height: 4px; background: var(--border);
+    border-radius: 2px; margin-top: 10px;
+  }
+  .stat-bar-fill {
+    height: 4px; background: var(--red);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+
+  /* FILTERS */
+  .filters-row {
+    display: flex; gap: 8px; align-items: center;
+    margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px; cursor: pointer;
+    color: var(--gray);
+    transition: all 0.15s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--navy); color: var(--white); border-color: var(--navy);
+  }
+  .filter-btn.priority-haute.active { background: #dc2626; border-color: #dc2626; }
+  .filter-btn.priority-moyenne.active { background: #d97706; border-color: #d97706; }
+  .filter-btn.priority-basse.active { background: #16a34a; border-color: #16a34a; }
+  .search-input {
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px; outline: none;
+    color: var(--navy);
+    transition: border-color 0.2s;
+    min-width: 200px;
+    margin-left: auto;
+  }
+  .search-input:focus { border-color: var(--navy); }
+
+  /* CATEGORY SECTION */
+  .category-section {
+    margin-bottom: 28px;
+  }
+  .category-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .category-icon { font-size: 18px; }
+  .category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--navy);
+  }
+  .category-badge {
+    font-size: 11px;
+    background: var(--navy-subtle);
+    color: var(--navy);
+    padding: 2px 10px; border-radius: 10px;
+  }
+  .category-progress {
+    margin-left: auto;
+    font-size: 11px; color: var(--gray);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .mini-bar { width: 80px; height: 4px; background: var(--border); border-radius: 2px; }
+  .mini-bar-fill { height: 4px; background: var(--red); border-radius: 2px; }
+  .category-collapse { color: var(--gray); font-size: 12px; transition: transform 0.2s; }
+  .category-section.collapsed .category-collapse { transform: rotate(-90deg); }
+
+  /* TASK GRID */
+  .tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 12px;
+  }
+
+  /* TASK CARD */
+  .task-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .task-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+  .task-card.done { opacity: 0.6; }
+  .task-card.done .task-title { text-decoration: line-through; }
+  .task-card-top {
+    display: flex; align-items: flex-start; gap: 10px;
+    margin-bottom: 10px;
+  }
+  .task-checkbox {
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .task-checkbox.checked {
+    background: var(--navy); border-color: var(--navy);
+    color: var(--white); font-size: 11px;
+  }
+  .task-title {
+    font-size: 14px; font-weight: 500;
+    color: var(--navy); line-height: 1.4;
+    flex: 1;
+  }
+  .task-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 10px;
+    font-weight: 500; letter-spacing: 0.3px;
+  }
+  .badge-priority-haute { background: #fee2e2; color: #dc2626; }
+  .badge-priority-moyenne { background: #fef3c7; color: #d97706; }
+  .badge-priority-basse { background: #dcfce7; color: #16a34a; }
+  .badge-status-todo { background: #f3f4f6; color: #6b7280; }
+  .badge-status-progress { background: #dbeafe; color: #2563eb; }
+  .badge-status-wait { background: #fef9c3; color: #b45309; }
+  .badge-status-done { background: #dcfce7; color: #15803d; }
+  .badge-type { background: var(--navy-subtle); color: var(--navy); }
+  .badge-validated { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .task-notes {
+    font-size: 12px; color: var(--gray);
+    line-height: 1.5; margin-bottom: 8px;
+  }
+  .task-date {
+    font-size: 11px; color: var(--gray);
+    display: flex; align-items: center; gap: 4px;
+  }
+  .task-date.overdue { color: var(--red); }
+  .task-image {
+    width: 100%; border-radius: 6px;
+    max-height: 120px; object-fit: cover;
+    margin-bottom: 8px;
+  }
+  .task-actions {
+    display: flex; gap: 6px; margin-top: 10px;
+    padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .task-btn {
+    flex: 1; padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 6px; background: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px; cursor: pointer;
+    color: var(--gray);
+    transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 4px;
+  }
+  .task-btn:hover { border-color: var(--navy); color: var(--navy); }
+  .task-btn.ai-btn:hover { border-color: var(--red); color: var(--red); }
+  .task-link {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 11px; color: var(--navy);
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .task-link:hover { color: var(--red); }
+  .task-card .priority-stripe {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+  }
+  .priority-stripe.haute { background: #dc2626; }
+  .priority-stripe.moyenne { background: #d97706; }
+  .priority-stripe.basse { background: #16a34a; }
+
+  /* BUDGET VIEW */
+  .budget-filters {
+    display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .budget-table {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .budget-table table {
+    width: 100%; border-collapse: collapse;
+  }
+  .budget-table th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    font-weight: 500;
+  }
+  .budget-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table tr:hover td { background: var(--gray-light); }
+  .budget-total {
+    display: flex; justify-content: flex-end;
+    gap: 24px; padding: 16px 20px;
+    background: var(--gray-light);
+    border-top: 2px solid var(--border);
+    font-weight: 600;
+  }
+  .budget-total-item { font-size: 13px; }
+  .budget-total-item span { color: var(--navy); }
+  .amount-devis { color: var(--navy); }
+  .amount-acompte { color: #d97706; }
+  .amount-solde { color: var(--red); }
+  .amount-paid { color: #16a34a; }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 500;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%; max-width: 560px;
+    max-height: 90vh; overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+  }
+  .modal h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--navy); margin-bottom: 24px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    display: block; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; color: var(--navy);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-control:focus { border-color: var(--navy); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-actions {
+    display: flex; gap: 10px; justify-content: flex-end;
+    margin-top: 24px;
+  }
+  .btn-cancel {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; cursor: pointer;
+    color: var(--gray);
+  }
+  .btn-save {
+    padding: 10px 24px;
+    background: var(--navy);
+    color: var(--white); border: none;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-save:hover { background: var(--navy-light); }
+
+  /* AI PANEL */
+  .ai-panel {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 16px;
+  }
+  .ai-panel-title {
+    font-size: 12px; letter-spacing: 1px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .ai-response {
+    font-size: 13px; color: var(--white);
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  .ai-loading {
+    display: flex; gap: 6px; align-items: center;
+  }
+  .ai-dot {
+    width: 6px; height: 6px;
+    background: var(--red); border-radius: 50%;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+  .ai-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+  /* CONFIG MODAL */
+  .config-hint {
+    font-size: 12px; color: var(--gray);
+    line-height: 1.5; margin-top: 4px;
+  }
+
+  /* TOAST */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast.error { background: var(--red); }
+
+  /* GITHUB SYNC STATUS */
+  .sync-status {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; color: rgba(255,255,255,0.4);
+    padding: 8px 16px;
+  }
+  .sync-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+  .sync-dot.syncing { background: #facc15; animation: pulse 1s infinite; }
+  .sync-dot.error { background: var(--red); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { width: 200px; }
+    .main { margin-left: 200px; padding: 20px; }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 640px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 16px; }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .tasks-grid { grid-template-columns: 1fr; }
+  }
+
+  .hidden { display: none !important; }
+  .view { display: none; }
+  .view.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-logo">
+    <div class="monogram">D</div>
+    <div class="brand-name">Douard Immobilier</div>
+  </div>
+  <div class="login-card">
+    <h2>Accès Dashboard</h2>
+    <input type="password" id="login-pwd" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="btn-login" onclick="doLogin()">Connexion</button>
+    <div class="login-error" id="login-error">Mot de passe incorrect</div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-monogram">D</div>
+      <div class="sidebar-brand">Douard Immobilier</div>
+      <div class="sidebar-subtitle">Dashboard Projet Rebranding</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Vues</div>
+      <div class="nav-item active" onclick="switchView('tasks','all')" id="nav-all">
+        <span class="nav-icon">📋</span> Toutes les tâches
+        <span class="nav-count" id="count-all">0</span>
+      </div>
+      <div class="nav-item" onclick="switchView('tasks','urgent')">
+        <span class="nav-icon">🔴</span> Priorité haute
+        <span class="nav-count" id="count-urgent">0</span>
+      </div>
+      <div class="nav-item" onclick="switchView('tasks','inprogress')">
+        <span class="nav-icon">🔵</span> En cours
+        <span class="nav-count" id="count-inprogress">0</span>
+      </div>
+      <div class="nav-item" onclick="switchView('budget',null)">
+        <span class="nav-icon">💶</span> Budget & Devis
+      </div>
+      <div class="nav-section-label" style="margin-top:12px;">Catégories</div>
+      <div id="sidebar-categories"></div>
+    </nav>
+    <div class="sync-status">
+      <div class="sync-dot" id="sync-dot"></div>
+      <span id="sync-label">Local</span>
+    </div>
+    <div class="sidebar-footer">
+      <button class="btn-logout" onclick="openConfig()">⚙ Configuration</button>
+      <button class="btn-logout" style="margin-top:6px;" onclick="doLogout()">Déconnexion</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="page-title" id="page-title">Toutes les <span>tâches</span></div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn-secondary" onclick="exportData()">⬇ Exporter</button>
+        <button class="btn-primary" onclick="openAddTask()">+ Nouvelle tâche</button>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat-card">
+        <div class="stat-label">Total tâches</div>
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-sub">toutes catégories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Terminées</div>
+        <div class="stat-value red" id="stat-done">0</div>
+        <div class="stat-bar-bg"><div class="stat-bar-fill" id="stat-done-bar" style="width:0%"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">En cours</div>
+        <div class="stat-value" id="stat-progress">0</div>
+        <div class="stat-sub" id="stat-progress-pct"></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Priorité haute</div>
+        <div class="stat-value red" id="stat-urgent">0</div>
+        <div class="stat-sub">à traiter en premier</div>
+      </div>
+    </div>
+
+    <!-- TASKS VIEW -->
+    <div class="view active" id="view-tasks">
+      <div class="filters-row">
+        <button class="filter-btn active" onclick="setStatusFilter(null,this)">Tous</button>
+        <button class="filter-btn" onclick="setStatusFilter('todo',this)">À faire</button>
+        <button class="filter-btn" onclick="setStatusFilter('progress',this)">En cours</button>
+        <button class="filter-btn" onclick="setStatusFilter('wait',this)">En attente</button>
+        <button class="filter-btn" onclick="setStatusFilter('done',this)">Terminé</button>
+        <input class="search-input" id="search-input" placeholder="🔍 Rechercher..." oninput="renderTasks()">
+      </div>
+      <div id="tasks-container"></div>
+    </div>
+
+    <!-- BUDGET VIEW -->
+    <div class="view" id="view-budget">
+      <div class="budget-filters">
+        <button class="filter-btn active" onclick="setBudgetFilter('all',this)">Toutes catégories</button>
+        <button class="filter-btn" onclick="setBudgetFilter('validated',this)">Validés seulement</button>
+        <div id="budget-cat-filters"></div>
+      </div>
+      <div id="budget-container"></div>
+    </div>
+  </main>
+</div>
+
+<!-- TASK MODAL -->
+<div class="modal-overlay hidden" id="task-modal">
+  <div class="modal">
+    <h3 id="modal-title">Nouvelle tâche</h3>
+    <div class="form-group">
+      <label class="form-label">Titre *</label>
+      <input class="form-control" id="f-title" placeholder="Description de la tâche">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Catégorie</label>
+        <select class="form-control" id="f-cat"></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Type</label>
+        <select class="form-control" id="f-type">
+          <option value="tache">Tâche</option>
+          <option value="idee">Idée</option>
+          <option value="achat">Élément à acheter</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Priorité</label>
+        <select class="form-control" id="f-priority">
+          <option value="haute">Haute</option>
+          <option value="moyenne">Moyenne</option>
+          <option value="basse">Basse</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Statut</label>
+        <select class="form-control" id="f-status">
+          <option value="todo">À faire</option>
+          <option value="progress">En cours</option>
+          <option value="wait">En attente</option>
+          <option value="done">Terminé</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Date cible</label>
+        <input type="date" class="form-control" id="f-date">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Validé ?</label>
+        <select class="form-control" id="f-validated">
+          <option value="0">Non validé</option>
+          <option value="1">Validé ✓</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notes</label>
+      <textarea class="form-control" id="f-notes" rows="3" placeholder="Informations complémentaires..."></textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Lien externe (URL)</label>
+        <input class="form-control" id="f-url" placeholder="https://...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Image (référence visuelle)</label>
+        <input type="file" class="form-control" id="f-image" accept="image/*" onchange="previewImage(event)">
+      </div>
+    </div>
+    <img id="f-image-preview" style="width:100%;border-radius:8px;max-height:150px;object-fit:cover;display:none;margin-top:8px;">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Devis (€)</label>
+        <input type="number" class="form-control" id="f-devis" placeholder="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Acompte versé (€)</label>
+        <input type="number" class="form-control" id="f-acompte" placeholder="0">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Montant payé total (€)</label>
+      <input type="number" class="form-control" id="f-paid" placeholder="0">
+    </div>
+
+    <!-- AI Advice -->
+    <div id="ai-advice-panel" class="hidden">
+      <div class="ai-panel">
+        <div class="ai-panel-title">✦ Avis de l'IA sur la priorité</div>
+        <div class="ai-response" id="ai-advice-text"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:12px;">
+      <button class="task-btn ai-btn" style="flex:none;padding:8px 16px;border-radius:8px;" onclick="askAIAdvice()">✦ Demander l'avis IA</button>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="closeModal()">Annuler</button>
+      <button class="btn-save" onclick="saveTask()">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIG MODAL -->
+<div class="modal-overlay hidden" id="config-modal">
+  <div class="modal">
+    <h3>⚙ Configuration</h3>
+    <div class="form-group">
+      <label class="form-label">Changer le mot de passe</label>
+      <input type="password" class="form-control" id="cfg-pwd" placeholder="Nouveau mot de passe">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Clé API Anthropic (pour le bouton IA)</label>
+      <input type="password" class="form-control" id="cfg-api" placeholder="sk-ant-...">
+      <div class="config-hint">Obtenir votre clé sur console.anthropic.com — stockée localement uniquement.</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">GitHub Token (pour la synchronisation cloud)</label>
+      <input type="password" class="form-control" id="cfg-ghtoken" placeholder="ghp_...">
+      <div class="config-hint">Token avec accès "repo" sur votre repo samosaan/douard-dashboard.</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Repo GitHub (owner/repo)</label>
+      <input class="form-control" id="cfg-ghrepo" placeholder="samosaan/douard-dashboard">
+    </div>
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="closeConfigModal()">Fermer</button>
+      <button class="btn-save" onclick="saveConfig()">Sauvegarder</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// =====================
+// DATA
+// =====================
+const CATEGORIES = [
+  { id:'travaux', label:'Travaux intérieurs', icon:'🔨' },
+  { id:'enseigne', label:'Enseigne extérieure', icon:'🏪' },
+  { id:'amenagement', label:'Aménagement intérieur', icon:'🛋️' },
+  { id:'decoration', label:'Décoration intérieure', icon:'🖼️' },
+  { id:'identite', label:'Identité de marque & assets', icon:'🎨' },
+  { id:'siteweb', label:'Site internet', icon:'🌐' },
+  { id:'crm', label:'CRM & outils digitaux', icon:'💻' },
+  { id:'reseaux', label:'Réseaux sociaux', icon:'📱' },
+  { id:'vitrine', label:'Affichage vitrine des biens', icon:'🪟' },
+  { id:'transition', label:'Transition Stéphane Plaza', icon:'🔄' },
+  { id:'admin', label:'Modifications administratives', icon:'📑' },
+  { id:'partenaires', label:'Relations partenaires', icon:'🤝' },
+  { id:'inauguration', label:'Inauguration & lancement', icon:'🎉' },
+];
+
+const INITIAL_TASKS = [
+  // TRAVAUX
+  { cat:'travaux', title:'Finaliser le projet détaillé pièce par pièce avant brief artisan', priority:'haute', status:'progress', type:'tache', notes:'Valider les décisions finales pour chaque pièce avant de communiquer les infos précises à M. Condor.' },
+  { cat:'travaux', title:'Valider et commander papier peint, luminaires, cadres, stickers', priority:'haute', status:'todo', type:'achat', notes:'Éléments nécessaires à M. Condor pour finaliser les travaux.' },
+  { cat:'travaux', title:'Journée rangement agence — préparer zone travaux / zone activité', priority:'haute', status:'todo', type:'tache', notes:'Faire descendre au garage tout ce qui est inutile. Créer deux espaces distincts.' },
+  { cat:'travaux', title:'Décrocher tous les éléments muraux (télé, cadres…)', priority:'haute', status:'todo', type:'tache', notes:'Préparer les murs avant l\'arrivée de M. Condor.' },
+  { cat:'travaux', title:'Valider avec M. Condor la date de début des travaux', priority:'haute', status:'todo', type:'tache', notes:'Lui demander ce dont il a besoin pour commencer.' },
+
+  // ENSEIGNE
+  { cat:'enseigne', title:'Valider présence du monogramme "D" rouge sur le bandeau enseigne', priority:'haute', status:'todo', type:'tache', notes:'Décision finale sur la version A de l\'enseigne horizontale.' },
+  { cat:'enseigne', title:'Valider la forme et les dimensions de l\'enseigne drapeau (totem)', priority:'haute', status:'todo', type:'tache', notes:'Confirmer le design du totem flag latéral.' },
+  { cat:'enseigne', title:'Verser l\'acompte à Joseph pour démarrer', priority:'haute', status:'todo', type:'tache', notes:'Permet à Joseph de venir prendre les côtes et finaliser le projet. Délai fab : 6 à 8 semaines.' },
+  { cat:'enseigne', title:'Décider qui réalise la peinture des poteaux en vitrine', priority:'moyenne', status:'todo', type:'tache', notes:'M. Condor ou Joseph ? Clarifier la répartition.' },
+  { cat:'enseigne', title:'Décider de la reprise peinture sur les menuiseries', priority:'moyenne', status:'todo', type:'tache', notes:'À confirmer selon l\'état des menuiseries après rangement.' },
+
+  // AMENAGEMENT
+  { cat:'amenagement', title:'Remplacer meuble vasque + vasque WC', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Changer cuvette WC', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Nouvelles poubelles pour l\'agence', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Luminaire plafond salle de réunion', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Luminaire plafond accueil', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Spots pour tableau dans le recoin', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Luminaire plafond salon', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Luminaires muraux salon (appliques)', priority:'moyenne', status:'todo', type:'achat', notes:'Appliques dorées warm pour le mur accent #252848.' },
+  { cat:'amenagement', title:'Lampe sur pied à l\'accueil', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Sol en jonc de mer entrée (≈200×200 cm)', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Connecteurs radiateur électrique compatibles Alexa', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Tabouret bar matelassé', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Nouvelles chaises', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Poignée porte WC', priority:'basse', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Meuble pour cacher le frigo', priority:'moyenne', status:'todo', type:'achat' },
+  { cat:'amenagement', title:'Planche bois clair à poser sur meuble blanc (option)', priority:'basse', status:'todo', type:'idee' },
+  { cat:'amenagement', title:'Changer quelques interrupteurs (standing/design)', priority:'basse', status:'todo', type:'achat' },
+
+  // DECORATION
+  { cat:'decoration', title:'Sticker Douard "à l\'ancienne" — salle de réunion', priority:'moyenne', status:'todo', type:'achat', notes:'Style vintage/patrimonial, cohérent avec l\'historique depuis 1972.' },
+  { cat:'decoration', title:'Sticker texte à définir — recoin co-working', priority:'moyenne', status:'todo', type:'idee', notes:'Phrase/citation à choisir pour le mur du recoin.' },
+  { cat:'decoration', title:'Tableau décoration dans le recoin', priority:'basse', status:'todo', type:'achat' },
+  { cat:'decoration', title:'Finaliser papier peint personnalisé (ville de Houilles)', priority:'haute', status:'progress', type:'tache', notes:'Valider la maquette finale. Étudier l\'option plexiglass protecteur + surface d\'écriture.' },
+  { cat:'decoration', title:'Impression 3D grand format monogramme rouge — mur salon', priority:'moyenne', status:'todo', type:'achat', notes:'Grand format, mur du fond salon.' },
+  { cat:'decoration', title:'Impression 3D petit format monogramme rouge sur socle', priority:'basse', status:'todo', type:'achat', notes:'Format de bureau, tient seul sur socle.' },
+  { cat:'decoration', title:'Logo volumétrique 3D à poser sur mur salon', priority:'haute', status:'todo', type:'achat', notes:'Brief à transmettre à Joseph (lettres volumétriques).' },
+  { cat:'decoration', title:'Redesigner la maison de poupée aux couleurs Douard', priority:'basse', status:'todo', type:'idee', notes:'Acheter éléments taille maison de poupée sur Temu. Relooking couleurs #252848 et rouge.' },
+  { cat:'decoration', title:'Quelques lampes de table', priority:'basse', status:'todo', type:'achat' },
+  { cat:'decoration', title:'Galerie photos N&B historiques Houilles + agence depuis 1972', priority:'moyenne', status:'todo', type:'tache', notes:'Pour le mur accueil. Encadrement cohérent. Intégration Samsung Frame TV parmi les cadres.' },
+
+  // IDENTITE
+  { cat:'identite', title:'Panneaux immobiliers aux couleurs Douard', priority:'haute', status:'todo', type:'achat', notes:'Visuels à créer puis commande en imprimerie.' },
+  { cat:'identite', title:'Cartes de visite', priority:'haute', status:'progress', type:'tache', notes:'Brief HTML + PowerPoint préparés pour le graphiste.' },
+  { cat:'identite', title:'Flyers de démarrage', priority:'haute', status:'todo', type:'tache' },
+  { cat:'identite', title:'Plaquette de présentation agence', priority:'moyenne', status:'todo', type:'tache' },
+  { cat:'identite', title:'Papier en-tête', priority:'moyenne', status:'todo', type:'tache' },
+  { cat:'identite', title:'Signatures mail Douard Immobilier', priority:'haute', status:'todo', type:'tache' },
+  { cat:'identite', title:'Déclinaisons du logo (formats, fonds)', priority:'haute', status:'progress', type:'tache', notes:'Versions fond clair, fond sombre, monochrome, favicon.' },
+  { cat:'identite', title:'Goodies (stylos, bloc-notes, mugs…)', priority:'basse', status:'todo', type:'achat' },
+
+  // SITE WEB
+  { cat:'siteweb', title:'Enregistrer le domaine douardimmobilier.com', priority:'haute', status:'todo', type:'tache' },
+  { cat:'siteweb', title:'Configurer redirection 301 agencedouard.com → douardimmobilier.com', priority:'haute', status:'todo', type:'tache', notes:'Pour préserver le SEO existant.' },
+  { cat:'siteweb', title:'Développer le site Douard Immobilier sur Lovable', priority:'haute', status:'todo', type:'tache' },
+
+  // CRM
+  { cat:'crm', title:'Choisir et configurer le CRM intégré au site', priority:'haute', status:'todo', type:'tache' },
+
+  // RESEAUX
+  { cat:'reseaux', title:'Fusion page Stéphane Plaza Houilles → page Douard Immobilier', priority:'haute', status:'todo', type:'tache', notes:'Facebook, Instagram, Google Business.' },
+  { cat:'reseaux', title:'Préparer et programmer les prochains posts de lancement', priority:'haute', status:'todo', type:'tache' },
+  { cat:'reseaux', title:'Budgétiser campagne de communication réseaux sociaux', priority:'moyenne', status:'todo', type:'tache' },
+
+  // VITRINE
+  { cat:'vitrine', title:'Revoir l\'affichage vitrine des biens (format, charte)', priority:'moyenne', status:'todo', type:'tache' },
+
+  // TRANSITION
+  { cat:'transition', title:'Migrer les mails Stéphane Plaza vers @douardimmobilier.com', priority:'haute', status:'todo', type:'tache' },
+  { cat:'transition', title:'Mettre à jour toutes les fiches locales (Google, SeLoger, LBC, Bien\'ici…)', priority:'haute', status:'todo', type:'tache' },
+  { cat:'transition', title:'Récupérer / rediriger les avis Google existants', priority:'haute', status:'todo', type:'tache' },
+  { cat:'transition', title:'Gérer la résiliation des accords réseau Stéphane Plaza', priority:'haute', status:'todo', type:'tache' },
+  { cat:'transition', title:'Vérifier la portabilité des mandats en cours', priority:'haute', status:'todo', type:'tache' },
+
+  // ADMIN
+  { cat:'admin', title:'Enregistrer "Douard Immobilier" comme nom commercial au Kbis', priority:'haute', status:'todo', type:'tache' },
+  { cat:'admin', title:'Évaluer dépôt de marque INPI', priority:'moyenne', status:'todo', type:'tache', notes:'Protéger "Douard Immobilier" comme marque.' },
+  { cat:'admin', title:'Mettre à jour la carte professionnelle CPI sous la nouvelle enseigne', priority:'haute', status:'todo', type:'tache' },
+  { cat:'admin', title:'Mise à jour attestation RCP assurance', priority:'haute', status:'todo', type:'tache' },
+  { cat:'admin', title:'Mettre à jour les mentions légales (mandats, site, documents)', priority:'haute', status:'todo', type:'tache' },
+  { cat:'admin', title:'Vérifications TVA et obligations fiscales liées au changement', priority:'moyenne', status:'todo', type:'tache' },
+
+  // PARTENAIRES
+  { cat:'partenaires', title:'Informer les notaires partenaires du changement d\'enseigne', priority:'moyenne', status:'todo', type:'tache' },
+  { cat:'partenaires', title:'Informer les banquiers partenaires', priority:'moyenne', status:'todo', type:'tache' },
+  { cat:'partenaires', title:'Informer les syndics et autres prescripteurs', priority:'moyenne', status:'todo', type:'tache' },
+
+  // INAUGURATION
+  { cat:'inauguration', title:'Définir la date et le format de l\'inauguration', priority:'moyenne', status:'todo', type:'tache' },
+  { cat:'inauguration', title:'Planifier les campagnes de communication de lancement', priority:'moyenne', status:'todo', type:'tache', notes:'Courrier, digital, presse locale, réseaux.' },
+  { cat:'inauguration', title:'Préparer un mailing d\'annonce clients et prospects', priority:'moyenne', status:'todo', type:'tache' },
+];
+
+// =====================
+// STATE
+// =====================
+let tasks = [];
+let currentView = 'tasks';
+let currentCatFilter = 'all';
+let currentStatusFilter = null;
+let currentBudgetCat = 'all';
+let currentBudgetValidated = false;
+let editingId = null;
+let config = {};
+
+// =====================
+// INIT
+// =====================
+function init() {
+  config = JSON.parse(localStorage.getItem('di_config') || '{}');
+  const saved = localStorage.getItem('di_tasks');
+  if (saved) {
+    tasks = JSON.parse(saved);
+  } else {
+    tasks = INITIAL_TASKS.map((t, i) => ({
+      id: 'task_' + Date.now() + '_' + i,
+      validated: 0, devis: 0, acompte: 0, paid: 0,
+      url: '', image: '', date: '', notes: '',
+      ...t
+    }));
+    saveTasks();
+  }
+  buildSidebar();
+  renderTasks();
+  buildBudgetCatFilters();
+  renderBudget();
+}
+
+function saveTasks() {
+  localStorage.setItem('di_tasks', JSON.stringify(tasks));
+  syncToGitHub();
+}
+
+// =====================
+// LOGIN
+// =====================
+function doLogin() {
+  const pwd = document.getElementById('login-pwd').value;
+  const stored = config.password || 'douard2024';
+  if (pwd === stored) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    init();
+  } else {
+    document.getElementById('login-error').style.display = 'block';
+  }
+}
+function doLogout() {
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('login-pwd').value = '';
+}
+
+// =====================
+// SIDEBAR
+// =====================
+function buildSidebar() {
+  const container = document.getElementById('sidebar-categories');
+  container.innerHTML = CATEGORIES.map(c => {
+    const count = tasks.filter(t => t.cat === c.id).length;
+    return `<div class="nav-item" onclick="switchView('tasks','${c.id}')">
+      <span class="nav-icon">${c.icon}</span>
+      <span style="flex:1;font-size:12px;">${c.label}</span>
+      <span class="nav-count">${count}</span>
+    </div>`;
+  }).join('');
+  // update counts
+  document.getElementById('count-all').textContent = tasks.length;
+  document.getElementById('count-urgent').textContent = tasks.filter(t=>t.priority==='haute').length;
+  document.getElementById('count-inprogress').textContent = tasks.filter(t=>t.status==='progress').length;
+}
+
+function switchView(view, catFilter) {
+  currentView = view;
+  currentCatFilter = catFilter || 'all';
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + view).classList.add('active');
+  // update titles
+  if (view === 'tasks') {
+    const cat = CATEGORIES.find(c=>c.id===catFilter);
+    document.getElementById('page-title').innerHTML = cat
+      ? `${cat.icon} <span>${cat.label}</span>`
+      : catFilter === 'urgent' ? '🔴 Priorité <span>haute</span>'
+      : catFilter === 'inprogress' ? '🔵 Tâches <span>en cours</span>'
+      : 'Toutes les <span>tâches</span>';
+    renderTasks();
+  } else {
+    document.getElementById('page-title').innerHTML = '💶 Budget & <span>Devis</span>';
+    renderBudget();
+  }
+}
+
+// =====================
+// FILTERS
+// =====================
+function setStatusFilter(status, btn) {
+  currentStatusFilter = status;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTasks();
+}
+
+// =====================
+// RENDER TASKS
+// =====================
+function renderTasks() {
+  updateStats();
+  buildSidebar();
+  const search = document.getElementById('search-input')?.value?.toLowerCase() || '';
+  let filtered = tasks.filter(t => {
+    if (currentCatFilter === 'urgent') return t.priority === 'haute';
+    if (currentCatFilter === 'inprogress') return t.status === 'progress';
+    if (currentCatFilter !== 'all') return t.cat === currentCatFilter;
+    return true;
+  });
+  if (currentStatusFilter) filtered = filtered.filter(t => t.status === currentStatusFilter);
+  if (search) filtered = filtered.filter(t =>
+    t.title.toLowerCase().includes(search) ||
+    (t.notes||'').toLowerCase().includes(search)
+  );
+
+  // Group by category
+  const byPriority = { haute: 0, moyenne: 1, basse: 2 };
+  const catsToShow = currentCatFilter === 'all' || currentCatFilter === 'urgent' || currentCatFilter === 'inprogress'
+    ? CATEGORIES
+    : CATEGORIES.filter(c => c.id === currentCatFilter);
+
+  let html = '';
+  for (const cat of catsToShow) {
+    const catTasks = filtered.filter(t => t.cat === cat.id)
+      .sort((a,b) => byPriority[a.priority] - byPriority[b.priority]);
+    if (!catTasks.length) continue;
+    const done = catTasks.filter(t=>t.status==='done').length;
+    const pct = Math.round(done/catTasks.length*100);
+    html += `<div class="category-section" id="cat-sec-${cat.id}">
+      <div class="category-header" onclick="toggleCategory('${cat.id}')">
+        <span class="category-icon">${cat.icon}</span>
+        <span class="category-title">${cat.label}</span>
+        <span class="category-badge">${catTasks.length} tâches</span>
+        <div class="category-progress">
+          <span>${done}/${catTasks.length}</span>
+          <div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+          <span>${pct}%</span>
+        </div>
+        <span class="category-collapse">▼</span>
+      </div>
+      <div class="tasks-grid" id="cat-grid-${cat.id}">
+        ${catTasks.map(t => renderTaskCard(t)).join('')}
+      </div>
+    </div>`;
+  }
+  document.getElementById('tasks-container').innerHTML = html || '<div style="text-align:center;padding:60px;color:#9ca3af;">Aucune tâche trouvée</div>';
+}
+
+function toggleCategory(catId) {
+  const sec = document.getElementById('cat-sec-'+catId);
+  sec.classList.toggle('collapsed');
+  const grid = document.getElementById('cat-grid-'+catId);
+  grid.style.display = sec.classList.contains('collapsed') ? 'none' : '';
+}
+
+function renderTaskCard(t) {
+  const statusLabel = {todo:'À faire',progress:'En cours',wait:'En attente',done:'Terminé'};
+  const today = new Date().toISOString().split('T')[0];
+  const isOverdue = t.date && t.date < today && t.status !== 'done';
+  const typeLabel = {tache:'Tâche',idee:'Idée',achat:'Achat'}[t.type] || t.type;
+  return `<div class="task-card ${t.status==='done'?'done':''}">
+    <div class="priority-stripe ${t.priority}"></div>
+    <div class="task-card-top">
+      <div class="task-checkbox ${t.status==='done'?'checked':''}" onclick="toggleDone('${t.id}')">
+        ${t.status==='done'?'✓':''}
+      </div>
+      <div class="task-title">${t.title}</div>
+    </div>
+    ${t.image ? `<img class="task-image" src="${t.image}" alt="">` : ''}
+    <div class="task-badges">
+      <span class="badge badge-priority-${t.priority}">${t.priority.charAt(0).toUpperCase()+t.priority.slice(1)}</span>
+      <span class="badge badge-status-${t.status}">${statusLabel[t.status]}</span>
+      <span class="badge badge-type">${typeLabel}</span>
+      ${t.validated ? '<span class="badge badge-validated">✓ Validé</span>' : ''}
+    </div>
+    ${t.notes ? `<div class="task-notes">${t.notes}</div>` : ''}
+    ${t.date ? `<div class="task-date ${isOverdue?'overdue':''}">📅 ${isOverdue?'⚠ ':''} ${formatDate(t.date)}</div>` : ''}
+    ${t.url ? `<a class="task-link" href="${t.url}" target="_blank">🔗 Voir le lien</a>` : ''}
+    ${(t.devis||t.acompte||t.paid) ? `<div style="font-size:11px;color:#6b7280;margin-top:6px;">
+      ${t.devis?`Devis: <b>${t.devis}€</b> `:''} ${t.acompte?`Acompte: <b>${t.acompte}€</b> `:''} ${t.paid?`Payé: <b>${t.paid}€</b>`:''}
+    </div>` : ''}
+    <div class="task-actions">
+      <button class="task-btn" onclick="editTask('${t.id}')">✏ Modifier</button>
+      <button class="task-btn ai-btn" onclick="openEditAndAsk('${t.id}')">✦ IA</button>
+      <button class="task-btn" onclick="deleteTask('${t.id}')" style="color:#dc2626;">🗑</button>
+    </div>
+  </div>`;
+}
+
+function formatDate(d) {
+  if (!d) return '';
+  const [y,m,day] = d.split('-');
+  return `${day}/${m}/${y}`;
+}
+
+function toggleDone(id) {
+  const t = tasks.find(t=>t.id===id);
+  if (!t) return;
+  t.status = t.status === 'done' ? 'todo' : 'done';
+  saveTasks();
+  renderTasks();
+}
+
+function deleteTask(id) {
+  if (!confirm('Supprimer cette tâche ?')) return;
+  tasks = tasks.filter(t=>t.id!==id);
+  saveTasks();
+  renderTasks();
+}
+
+// =====================
+// STATS
+// =====================
+function updateStats() {
+  const total = tasks.length;
+  const done = tasks.filter(t=>t.status==='done').length;
+  const prog = tasks.filter(t=>t.status==='progress').length;
+  const urgent = tasks.filter(t=>t.priority==='haute'&&t.status!=='done').length;
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-done').textContent = done;
+  document.getElementById('stat-done-bar').style.width = total ? (done/total*100)+'%' : '0%';
+  document.getElementById('stat-progress').textContent = prog;
+  document.getElementById('stat-progress-pct').textContent = total ? Math.round(prog/total*100)+'% du total' : '';
+  document.getElementById('stat-urgent').textContent = urgent;
+}
+
+// =====================
+// ADD / EDIT MODAL
+// =====================
+function populateCatSelect() {
+  const sel = document.getElementById('f-cat');
+  sel.innerHTML = CATEGORIES.map(c=>`<option value="${c.id}">${c.icon} ${c.label}</option>`).join('');
+}
+
+function openAddTask() {
+  editingId = null;
+  populateCatSelect();
+  document.getElementById('modal-title').textContent = 'Nouvelle tâche';
+  document.getElementById('f-title').value = '';
+  document.getElementById('f-cat').value = currentCatFilter !== 'all' && currentCatFilter !== 'urgent' && currentCatFilter !== 'inprogress' ? currentCatFilter : 'travaux';
+  document.getElementById('f-type').value = 'tache';
+  document.getElementById('f-priority').value = 'moyenne';
+  document.getElementById('f-status').value = 'todo';
+  document.getElementById('f-date').value = '';
+  document.getElementById('f-validated').value = '0';
+  document.getElementById('f-notes').value = '';
+  document.getElementById('f-url').value = '';
+  document.getElementById('f-devis').value = '';
+  document.getElementById('f-acompte').value = '';
+  document.getElementById('f-paid').value = '';
+  document.getElementById('f-image-preview').style.display = 'none';
+  document.getElementById('ai-advice-panel').classList.add('hidden');
+  document.getElementById('task-modal').classList.remove('hidden');
+}
+
+function editTask(id) {
+  const t = tasks.find(t=>t.id===id);
+  if (!t) return;
+  editingId = id;
+  populateCatSelect();
+  document.getElementById('modal-title').textContent = 'Modifier la tâche';
+  document.getElementById('f-title').value = t.title;
+  document.getElementById('f-cat').value = t.cat;
+  document.getElementById('f-type').value = t.type || 'tache';
+  document.getElementById('f-priority').value = t.priority;
+  document.getElementById('f-status').value = t.status;
+  document.getElementById('f-date').value = t.date || '';
+  document.getElementById('f-validated').value = t.validated ? '1' : '0';
+  document.getElementById('f-notes').value = t.notes || '';
+  document.getElementById('f-url').value = t.url || '';
+  document.getElementById('f-devis').value = t.devis || '';
+  document.getElementById('f-acompte').value = t.acompte || '';
+  document.getElementById('f-paid').value = t.paid || '';
+  const preview = document.getElementById('f-image-preview');
+  if (t.image) { preview.src = t.image; preview.style.display = 'block'; } else { preview.style.display = 'none'; }
+  document.getElementById('ai-advice-panel').classList.add('hidden');
+  document.getElementById('task-modal').classList.remove('hidden');
+}
+
+function openEditAndAsk(id) {
+  editTask(id);
+  setTimeout(() => askAIAdvice(), 100);
+}
+
+function closeModal() {
+  document.getElementById('task-modal').classList.add('hidden');
+  editingId = null;
+}
+
+function previewImage(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const preview = document.getElementById('f-image-preview');
+    preview.src = ev.target.result;
+    preview.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+function saveTask() {
+  const title = document.getElementById('f-title').value.trim();
+  if (!title) { showToast('Le titre est obligatoire', true); return; }
+  const imageInput = document.getElementById('f-image');
+  const preview = document.getElementById('f-image-preview');
+
+  const taskData = {
+    title,
+    cat: document.getElementById('f-cat').value,
+    type: document.getElementById('f-type').value,
+    priority: document.getElementById('f-priority').value,
+    status: document.getElementById('f-status').value,
+    date: document.getElementById('f-date').value,
+    validated: parseInt(document.getElementById('f-validated').value),
+    notes: document.getElementById('f-notes').value,
+    url: document.getElementById('f-url').value,
+    image: preview.style.display !== 'none' ? preview.src : '',
+    devis: parseFloat(document.getElementById('f-devis').value) || 0,
+    acompte: parseFloat(document.getElementById('f-acompte').value) || 0,
+    paid: parseFloat(document.getElementById('f-paid').value) || 0,
+  };
+
+  if (editingId) {
+    const idx = tasks.findIndex(t=>t.id===editingId);
+    tasks[idx] = { ...tasks[idx], ...taskData };
+  } else {
+    tasks.push({ id: 'task_' + Date.now(), ...taskData });
+  }
+  saveTasks();
+  renderTasks();
+  closeModal();
+  showToast(editingId ? 'Tâche mise à jour' : 'Tâche ajoutée');
+}
+
+// =====================
+// AI ADVICE
+// =====================
+async function askAIAdvice() {
+  const apiKey = config.anthropicKey;
+  if (!apiKey) {
+    showToast('Configurez votre clé API Anthropic d\'abord (⚙ Configuration)', true);
+    return;
+  }
+  const panel = document.getElementById('ai-advice-panel');
+  const text = document.getElementById('ai-advice-text');
+  panel.classList.remove('hidden');
+  text.innerHTML = '<div class="ai-loading"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>';
+
+  const title = document.getElementById('f-title').value;
+  const cat = document.getElementById('f-cat').value;
+  const notes = document.getElementById('f-notes').value;
+  const priority = document.getElementById('f-priority').value;
+
+  const catLabel = CATEGORIES.find(c=>c.id===cat)?.label || cat;
+  const prompt = `Tu es un consultant en management de projet pour une agence immobilière indépendante en plein rebranding complet (Douard Immobilier, Houilles, anciennement réseau Stéphane Plaza). 
+
+Tâche : "${title}"
+Catégorie : ${catLabel}
+Priorité actuelle : ${priority}
+Notes : ${notes || 'Aucune'}
+
+Donne un avis concis (5-8 lignes max) sur : la priorité de cette tâche dans le contexte du rebranding, les éventuelles dépendances avec d'autres actions, et une recommandation concrète sur quand/comment la traiter. Sois direct et opérationnel.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 400,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    text.textContent = data.content?.[0]?.text || 'Erreur de réponse.';
+  } catch(e) {
+    text.textContent = 'Erreur de connexion à l\'API.';
+  }
+}
+
+// =====================
+// BUDGET
+// =====================
+function setBudgetFilter(type, btn) {
+  document.querySelectorAll('.budget-filters .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if (type === 'validated') { currentBudgetValidated = true; currentBudgetCat = 'all'; }
+  else if (type === 'all') { currentBudgetValidated = false; currentBudgetCat = 'all'; }
+  else { currentBudgetCat = type; currentBudgetValidated = false; }
+  renderBudget();
+}
+
+function buildBudgetCatFilters() {
+  const container = document.getElementById('budget-cat-filters');
+  container.innerHTML = CATEGORIES.map(c =>
+    `<button class="filter-btn" onclick="setBudgetFilter('${c.id}',this)">${c.icon} ${c.label}</button>`
+  ).join('');
+}
+
+function renderBudget() {
+  let filtered = tasks.filter(t => t.devis || t.acompte || t.paid);
+  if (currentBudgetValidated) filtered = filtered.filter(t => t.validated);
+  if (currentBudgetCat !== 'all') filtered = filtered.filter(t => t.cat === currentBudgetCat);
+
+  const totalDevis = filtered.reduce((s,t)=>s+(t.devis||0),0);
+  const totalAcompte = filtered.reduce((s,t)=>s+(t.acompte||0),0);
+  const totalPaid = filtered.reduce((s,t)=>s+(t.paid||0),0);
+  const totalSolde = totalDevis - totalPaid;
+
+  const rows = filtered.map(t => {
+    const cat = CATEGORIES.find(c=>c.id===t.cat);
+    const solde = (t.devis||0) - (t.paid||0);
+    return `<tr>
+      <td>${cat?.icon||''} ${cat?.label||t.cat}</td>
+      <td>${t.title}</td>
+      <td class="amount-devis">${t.devis ? t.devis.toLocaleString('fr-FR')+'€' : '—'}</td>
+      <td class="amount-acompte">${t.acompte ? t.acompte.toLocaleString('fr-FR')+'€' : '—'}</td>
+      <td class="amount-paid">${t.paid ? t.paid.toLocaleString('fr-FR')+'€' : '—'}</td>
+      <td class="amount-solde">${t.devis ? solde.toLocaleString('fr-FR')+'€' : '—'}</td>
+      <td>${t.validated ? '<span class="badge badge-validated">✓</span>' : '—'}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('budget-container').innerHTML = `
+    <div class="budget-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Catégorie</th><th>Tâche / Élément</th>
+            <th>Devis</th><th>Acompte</th><th>Payé</th><th>Solde</th><th>Validé</th>
+          </tr>
+        </thead>
+        <tbody>${rows || '<tr><td colspan="7" style="text-align:center;color:#9ca3af;padding:40px;">Aucun élément budgétaire</td></tr>'}</tbody>
+      </table>
+      <div class="budget-total">
+        <div class="budget-total-item">Total devis : <span>${totalDevis.toLocaleString('fr-FR')} €</span></div>
+        <div class="budget-total-item">Total acomptes : <span>${totalAcompte.toLocaleString('fr-FR')} €</span></div>
+        <div class="budget-total-item">Total payé : <span>${totalPaid.toLocaleString('fr-FR')} €</span></div>
+        <div class="budget-total-item" style="color:var(--red)">Solde restant : <span>${totalSolde.toLocaleString('fr-FR')} €</span></div>
+      </div>
+    </div>`;
+}
+
+// =====================
+// CONFIG
+// =====================
+function openConfig() {
+  document.getElementById('cfg-api').value = config.anthropicKey || '';
+  document.getElementById('cfg-ghtoken').value = config.githubToken || '';
+  document.getElementById('cfg-ghrepo').value = config.githubRepo || 'samosaan/douard-dashboard';
+  document.getElementById('cfg-pwd').value = '';
+  document.getElementById('config-modal').classList.remove('hidden');
+}
+function closeConfigModal() { document.getElementById('config-modal').classList.add('hidden'); }
+function saveConfig() {
+  if (document.getElementById('cfg-pwd').value) config.password = document.getElementById('cfg-pwd').value;
+  config.anthropicKey = document.getElementById('cfg-api').value;
+  config.githubToken = document.getElementById('cfg-ghtoken').value;
+  config.githubRepo = document.getElementById('cfg-ghrepo').value || 'samosaan/douard-dashboard';
+  localStorage.setItem('di_config', JSON.stringify(config));
+  closeConfigModal();
+  showToast('Configuration sauvegardée');
+}
+
+// =====================
+// GITHUB SYNC
+// =====================
+async function syncToGitHub() {
+  if (!config.githubToken || !config.githubRepo) return;
+  const dot = document.getElementById('sync-dot');
+  const label = document.getElementById('sync-label');
+  dot.className = 'sync-dot syncing';
+  label.textContent = 'Sync...';
+  try {
+    const repo = config.githubRepo;
+    const path = 'data.json';
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(tasks, null, 2))));
+    // Get current SHA
+    let sha = '';
+    const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+      headers: { Authorization: `token ${config.githubToken}`, Accept: 'application/vnd.github.v3+json' }
+    });
+    if (getRes.ok) { const d = await getRes.json(); sha = d.sha; }
+    // Put
+    const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+      method: 'PUT',
+      headers: { Authorization: `token ${config.githubToken}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'Update tasks', content, sha })
+    });
+    if (putRes.ok) {
+      dot.className = 'sync-dot'; label.textContent = 'Synchro ✓';
+    } else { throw new Error(); }
+  } catch(e) {
+    dot.className = 'sync-dot error'; label.textContent = 'Sync échoué';
+  }
+}
+
+async function loadFromGitHub() {
+  if (!config.githubToken || !config.githubRepo) return;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/data.json`, {
+      headers: { Authorization: `token ${config.githubToken}` }
+    });
+    if (res.ok) {
+      const d = await res.json();
+      const content = JSON.parse(decodeURIComponent(escape(atob(d.content))));
+      tasks = content;
+      localStorage.setItem('di_tasks', JSON.stringify(tasks));
+      buildSidebar(); renderTasks(); renderBudget();
+    }
+  } catch(e) {}
+}
+
+// =====================
+// EXPORT
+// =====================
+function exportData() {
+  const blob = new Blob([JSON.stringify(tasks, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'douard-dashboard-' + new Date().toISOString().split('T')[0] + '.json';
+  a.click();
+  showToast('Export téléchargé');
+}
+
+// =====================
+// TOAST
+// =====================
+function showToast(msg, error=false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast' + (error?' error':'') + ' show';
+  setTimeout(()=>t.classList.remove('show'), 3000);
+}
+
+// Close modals on overlay click
+document.getElementById('task-modal').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+document.getElementById('config-modal').addEventListener('click', e => { if(e.target===e.currentTarget) closeConfigModal(); });
+</script>
+</body>
+</html>
