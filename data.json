@@ -1207,7 +1207,7 @@
       "id": "task_1776618593422",
       "title": "Créer un agent ia DOUARD virtuel : avec eleven labs ou autres : baremes , infos, rdv, estimation,",
       "aiAdvice": "# Avis - Agent IA DOUARD Virtuel\n\n**Priorité : À passer en HAUTE** (pas moyenne)\n\nCet agent est un élément clé du rebranding – il incarne la nouvelle identité DOUARD et modernise l'image face à l'héritage Stéphane Plaza. C'est un vecteur de différenciation immédiate.\n\n**Dépendances critiques :**\n- Brand guidelines finalisées (tone, visuels, valeurs)\n- Base de données complète (barrèmes, process estimation, disponibilités RDV)\n- Intégration CRM/agenda existant\n- Scripts de qualification clients validés\n\n**Recommandation :**\nLancer en parallèle du lancement du nouveau site/identité visuelle (pas après). Commencer par l'MVP : agent téléphonique IA (Eleven Labs) pour prise de RDV + infos basiques. Estimation et barrèmes détaillés en phase 2. **Timing : démarrage immédiat si rebranding lancé, livraison 4-6 semaines.**",
-      "cat": "travaux",
+      "cat": "cat_op_ration_de_communi_3529",
       "purchaseStatus": "commander",
       "quantity": 1,
       "priceEst": 0,
