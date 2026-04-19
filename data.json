@@ -791,12 +791,18 @@
       "url": "",
       "image": "",
       "date": "",
-      "notes": "",
+      "notes": "Interface administrateur pour les collaborateurs et le superviseur de l'agence ligne, on y retrouvera plusieurs outils qui seront aujourd'hui utilisé à travers d'autres logiciels comme mon ligne, on y retrouvera des bases de connaissances des process ainsi que des tutoriel\nIl y aura un système de suivi des ventes et de suivi des locations, même si Gigi est indépendant du site principal de l'Agence Douard, il doit quand même pouvoir accéder à sa base de données des biens immobiliers afin de les exploiter dans le système ligne, il aurait une question de collaborer à quelle heure et évidemment des des droits des collaborateurs suivant leur statut négociateurs, administrateur assistant et les services\nVoici certaines fonctionnalités vendues : un cahier des messages, intelligent qui reprend le modèle de modèle, mais en beaucoup plus adapté et avec une gestion des tâches type focus\nUne gestion du tableau des clés sur le modèle demandé avec la possibilité de fonctionnalité en existant sur mon des comme un système d'alerte, l'historique, la photo des clés, l'analyse paria du groupe des clés\nDans la section communication communication et pour y avoir une section dédiée aux écrans en vitrine simplement pour indiquer quelles sont les biens qui sont actuellement diffusés sur chacun des télés. Cette section permettra de comptabiliser et d'indiquer mon nombre d'heures de jours, la durée et nous avons fait de diffusion pour chaque bien. Il pourra avoir un lien pour aller directement accéder à l'interface de Vitrine Media en indiquant bien que si un changement fait sûr, faut penser à le faire sur interfaces do immobilier\nPour l'administrateur il pourrait avoir des fonctions de statique beaucoup plus évoluées avec un suivi de chiffre d'affaires et un système de calcul des commissions de collaborateurs\nJe pourrais aussi essayer au fur et à mesure d'intégrer certains fichiers, celles que j'utilise pour les adapter sur une interface Web en ligne comme par exemple le suivi des payes et ce qui me permettrait de pouvoir les payes dès collaborateurs directement dans leur compte Agence\nDans la partie des ventes voir si celle-ci doit également me servir d'aide comptabilité de suivi des factures que ce soit des factures d'honoraires ou des factures de dépense\nIl devra quand même y avoir un système de sécurité assez poussé car il va y avoir des données sensibles. Ligne nous pourrions progressivement intégrer toutes les ventes qui ont eu lieu par le passé, soit manuellement, soit avec un import Excel, ce qui nous permettrait de pouvoir faire des campagnes de communication ciblée sur des Proprietaire suivants, le nombre d'années de l'opération\nÀ terme lia devra régulièrement proposé au superviseur des façons d'exploiter les données pour la communication\nToujours dans la partie communication, il sera alors intéressant d'intégrer un calendrier des parution à prévoir sur les réseaux sociaux ainsi que les différents liens pour pouvoir liker me donner son avis.\n\nToujours dans la partie communication, il pourrait y avoir une gestion des panneaux pour indiquer quels sont les panneaux en stock et où est-ce qu'il se trouve ?\n\n",
       "cat": "crm",
       "title": "Choisir et configurer le CRM intégré au site",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": ""
     },
     {
       "id": "task_1776600686595_49",
