@@ -1168,6 +1168,28 @@
       "devis": 0,
       "acompte": 0,
       "paid": 0
+    },
+    {
+      "id": "task_1776617701533",
+      "title": "Envoyer mail à la base client",
+      "aiAdvice": "# Avis - Tâche \"Mail base client\"\n\n**Priorité : À ÉLEVER en HAUTE**\nCette action est critique pour un rebranding : c'est votre première impression auprès de la base existante. Un mail tardif ou mal coordonné crée de la confusion et risque de perdre des prospects.\n\n**Dépendances identifiées :**\n- ✓ Site finalisé et testé (sinon lien mort = crédibilité perdue)\n- ✓ Charte graphique validée (cohérence visuelle rebranding)\n- ✓ FAQ anticipée sur \"pourquoi ce changement\" (clients Stéphane Plaza désorientés)\n\n**Recommandation concrète :**\nEnvoyer **dans les 48-72h après le lancement du site**, en trois vagues segmentées (vendeurs actifs → contacts tièdes → archives). Sujet accrocheur : *\"Douard Immobilier : même équipe, nouvelle énergie\"* pour rassurer sur la continuité. Incluez un lien trackable pour mesurer l'engagement = données précieuses post-rebranding.",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "2026-05-04",
+      "validated": 0,
+      "notes": "venez visiter notre nouveau site Internet, dopé à l'intelligence artificielle, Agence à la fois humaine, historique et moderne\n\n--- Analyse IA (19/04/2026 18:55) ---\n# Avis - Tâche \"Mail base client\"\n\n**Priorité : À ÉLEVER en HAUTE**\nCette action est critique pour un rebranding : c'est votre première impression auprès de la base existante. Un mail tardif ou mal coordonné crée de la confusion et risque de perdre des prospects.\n\n**Dépendances identifiées :**\n- ✓ Site finalisé et testé (sinon lien mort = crédibilité perdue)\n- ✓ Charte graphique validée (cohérence visuelle rebranding)\n- ✓ FAQ anticipée sur \"pourquoi ce changement\" (clients Stéphane Plaza désorientés)\n\n**Recommandation concrète :**\nEnvoyer **dans les 48-72h après le lancement du site**, en trois vagues segmentées (vendeurs actifs → contacts tièdes → archives). Sujet accrocheur : *\"Douard Immobilier : même équipe, nouvelle énergie\"* pour rassurer sur la continuité. Incluez un lien trackable pour mesurer l'engagement = données précieuses post-rebranding.",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
     }
   ],
   "subcats": {
