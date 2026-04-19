@@ -13,7 +13,8 @@
     "title": "Finaliser le projet détaillé pièce par pièce avant brief artisan",
     "priority": "haute",
     "status": "todo",
-    "type": "tache"
+    "type": "tache",
+    "order": 1
   },
   {
     "id": "task_1776600686595_1",
@@ -29,7 +30,8 @@
     "title": "Valider et commander papier peint, luminaires, cadres, stickers",
     "priority": "haute",
     "status": "todo",
-    "type": "achat"
+    "type": "achat",
+    "order": 2
   },
   {
     "id": "task_1776600686595_2",
@@ -45,7 +47,8 @@
     "title": "Journée rangement agence — préparer zone travaux / zone activité",
     "priority": "haute",
     "status": "todo",
-    "type": "tache"
+    "type": "tache",
+    "order": 0
   },
   {
     "id": "task_1776600686595_3",
@@ -61,7 +64,8 @@
     "title": "Décrocher tous les éléments muraux (télé, cadres…)",
     "priority": "haute",
     "status": "todo",
-    "type": "tache"
+    "type": "tache",
+    "order": 3
   },
   {
     "id": "task_1776600686595_4",
@@ -77,7 +81,8 @@
     "title": "Valider avec M. Condor la date de début des travaux",
     "priority": "haute",
     "status": "todo",
-    "type": "tache"
+    "type": "tache",
+    "order": 4
   },
   {
     "id": "task_1776600686595_5",
@@ -1133,6 +1138,7 @@
     "image": "",
     "devis": 0,
     "acompte": 0,
-    "paid": 0
+    "paid": 0,
+    "order": 5
   }
 ]
