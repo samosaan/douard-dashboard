@@ -32,7 +32,8 @@
     "priority": "haute",
     "status": "todo",
     "type": "achat",
-    "order": 4
+    "order": 4,
+    "aiAdvice": "# Avis sur la tâche \"Valider et commander papier peint, luminaires, cadres, stickers\"\n\n**Priorité justifiée mais chronologie critique.** Cette tâche est effectivement haute car elle conditionne l'achèvement visuel du rebranding — l'agence ne peut pas accueillir de clients dans un espace inachevé.\n\n**Dépendances majeures :**\n- Validation préalable de la charte graphique/identité visuelle finalisée (couleurs, logo, tone & feel)\n- Validation des devis et budgets alloués par la direction\n\n**Recommandation opérationnelle :**\nFaire valider immédiatement les références et rendus visuels (papier peint + luminaires) par la direction avant commande (délai fournisseur = ~2-3 semaines). Confier la coordination à M. Condor avec date limite de commande cette semaine pour une pose avant ouverture. Paralléliser : pendant la fabrication, préparer l'installation des stickers/cadres.\n\n**Action urgent :** Identifier le responsable des choix esthétiques et bloquer une réunion validation TODAY."
   },
   {
     "id": "task_1776600686595_2",
