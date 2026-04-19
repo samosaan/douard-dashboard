@@ -1118,5 +1118,21 @@
     "priority": "moyenne",
     "status": "todo",
     "type": "tache"
+  },
+  {
+    "id": "task_1776604337576",
+    "title": "Tester les différents Bleus et valider",
+    "cat": "travaux",
+    "type": "tache",
+    "priority": "moyenne",
+    "status": "todo",
+    "date": "",
+    "validated": 0,
+    "notes": "",
+    "url": "",
+    "image": "",
+    "devis": 0,
+    "acompte": 0,
+    "paid": 0
   }
 ]
