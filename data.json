@@ -1312,6 +1312,28 @@
       "devis": 0,
       "acompte": 0,
       "paid": 0
+    },
+    {
+      "id": "task_1776619012340",
+      "title": "reprendre la coccinelle en or créé avec ChatGPT, et voir qui pourrait la construire va fabriquer une vingtaine d'exemplaires afin d' offrir aux clients",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
     }
   ],
   "subcats": {
