@@ -866,10 +866,11 @@
     "date": "",
     "notes": "",
     "cat": "transition",
-    "title": "Migrer les mails Stéphane Plaza vers @douardimmobilier.com",
+    "title": "Migrer les mails Stéphane Plaza vers @douardimmobilier.com ou @agencedouard",
     "priority": "haute",
     "status": "todo",
-    "type": "tache"
+    "type": "tache",
+    "aiAdvice": ""
   },
   {
     "id": "task_1776600686595_54",
