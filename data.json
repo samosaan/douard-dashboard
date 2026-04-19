@@ -14,7 +14,7 @@
     "priority": "haute",
     "status": "todo",
     "type": "tache",
-    "order": 1
+    "order": 2
   },
   {
     "id": "task_1776600686595_1",
@@ -31,7 +31,7 @@
     "priority": "haute",
     "status": "todo",
     "type": "achat",
-    "order": 3
+    "order": 4
   },
   {
     "id": "task_1776600686595_2",
@@ -65,7 +65,7 @@
     "priority": "haute",
     "status": "todo",
     "type": "tache",
-    "order": 4
+    "order": 5
   },
   {
     "id": "task_1776600686595_4",
@@ -82,7 +82,7 @@
     "priority": "haute",
     "status": "todo",
     "type": "tache",
-    "order": 2
+    "order": 3
   },
   {
     "id": "task_1776600686595_5",
@@ -1139,6 +1139,6 @@
     "devis": 0,
     "acompte": 0,
     "paid": 0,
-    "order": 5
+    "order": 1
   }
 ]
