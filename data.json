@@ -1488,6 +1488,28 @@
       "devis": 0,
       "acompte": 0,
       "paid": 0
+    },
+    {
+      "id": "task_1776619328645",
+      "title": "Faire une landing page douard en attente du lancement du site",
+      "aiAdvice": "# Avis sur la Landing Page Douard\n\n**Priorité justifiée ✓** – La landing page est un élément critique du rebranding : elle sécurise le trafic existant (clients, prospects, partenaires) pendant la transition et renforce la nouvelle identité en ligne immédiatement.\n\n**Dépendances clés :**\n- Charte graphique finalisée (logo, couleurs, typographie)\n- Messaging rebranding validé (positionnement, promesse client)\n- Plan de redirection des URLs anciennes (Stéphane Plaza → Douard)\n\n**Recommandation opérationnelle :**\nLancer cette tâche **en parallèle** du site complet (ne pas l'attendre). Scope léger : présentation Douard + formulaire de contact + CTA clairs. À publier dès que charte + messaging sont validés. Cela gagne 2-3 semaines et offre une vitrine visible dès maintenant.",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "tache",
+      "priority": "haute",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "--- Analyse IA (19/04/2026 19:22) ---\n# Avis sur la Landing Page Douard\n\n**Priorité justifiée ✓** – La landing page est un élément critique du rebranding : elle sécurise le trafic existant (clients, prospects, partenaires) pendant la transition et renforce la nouvelle identité en ligne immédiatement.\n\n**Dépendances clés :**\n- Charte graphique finalisée (logo, couleurs, typographie)\n- Messaging rebranding validé (positionnement, promesse client)\n- Plan de redirection des URLs anciennes (Stéphane Plaza → Douard)\n\n**Recommandation opérationnelle :**\nLancer cette tâche **en parallèle** du site complet (ne pas l'attendre). Scope léger : présentation Douard + formulaire de contact + CTA clairs. À publier dès que charte + messaging sont validés. Cela gagne 2-3 semaines et offre une vitrine visible dès maintenant.",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
     }
   ],
   "subcats": {
