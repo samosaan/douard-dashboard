@@ -1265,5 +1265,11 @@
       "task_1776600686595_57": "Mandats & Contrats Clients"
     }
   },
-  "customCats": []
+  "customCats": [
+    {
+      "id": "cat_op_ration_de_communi_3529",
+      "label": "Opération de Communication",
+      "icon": "📌"
+    }
+  ]
 }
