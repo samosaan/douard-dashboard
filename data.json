@@ -1,87 +1,101 @@
 {
   "tasks": [
     {
-      "id": "task_1776685259820_0",
+      "id": "task_1776600686595_0",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
-      "notes": "Valider les décisions finales pour chaque pièce avant de communiquer les infos précises à M. Condor.",
+      "date": "2026-04-20",
+      "notes": "",
       "cat": "travaux",
       "title": "Finaliser le projet détaillé pièce par pièce avant brief artisan",
       "priority": "haute",
-      "status": "progress",
-      "type": "tache"
+      "status": "todo",
+      "type": "tache",
+      "order": 2,
+      "aiAdvice": "# Avis Consultant – Finalisation Projet Détaillé Pièce par Pièce\n\n**Priorité justifiée : TRÈS HAUTE** – Vous ne pouvez pas brief les artisans sans spécifications finales. C'est le goulot d'étranglement critique avant les travaux.\n\n**Dépendances identifiées :**\n- En amont : validation de la charte graphique/identité visuelle (couleurs, matériaux, style)\n- En parallèle : confirmations budgétaires et calendrier travaux auprès de votre direction\n- En aval : tout retard ici impacte directement le démarrage de chantier et la deadline de rebranding\n\n**Recommandation concrète :**\n**Cette semaine, bloc de 4h minimum** pour valider pièce par pièce avec les décideurs clés (responsable design + direction). Livrable : document pièce par pièce avec photos de référence, matériaux précis, codes couleurs. Transmettez-le à M. Condor avec un appel de validation (15 min) avant le brief complet. Cela évite les allers-retours interminables en phase exécution.\n\n**Surtout : figer les décisions maintenant.**"
     },
     {
-      "id": "task_1776685259820_1",
+      "id": "task_1776600686595_1",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
+      "date": "2026-04-21",
       "notes": "Éléments nécessaires à M. Condor pour finaliser les travaux.",
       "cat": "travaux",
       "title": "Valider et commander papier peint, luminaires, cadres, stickers",
       "priority": "haute",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "order": 4,
+      "aiAdvice": "# Avis sur la tâche \"Valider et commander papier peint, luminaires, cadres, stickers\"\n\n**Priorité justifiée mais chronologie critique.** Cette tâche est effectivement haute car elle conditionne l'achèvement visuel du rebranding — l'agence ne peut pas accueillir de clients dans un espace inachevé.\n\n**Dépendances majeures :**\n- Validation préalable de la charte graphique/identité visuelle finalisée (couleurs, logo, tone & feel)\n- Validation des devis et budgets alloués par la direction\n\n**Recommandation opérationnelle :**\nFaire valider immédiatement les références et rendus visuels (papier peint + luminaires) par la direction avant commande (délai fournisseur = ~2-3 semaines). Confier la coordination à M. Condor avec date limite de commande cette semaine pour une pose avant ouverture. Paralléliser : pendant la fabrication, préparer l'installation des stickers/cadres.\n\n**Action urgent :** Identifier le responsable des choix esthétiques et bloquer une réunion validation TODAY."
     },
     {
-      "id": "task_1776685259820_2",
+      "id": "task_1776600686595_2",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
-      "notes": "Faire descendre au garage tout ce qui est inutile. Créer deux espaces distincts.",
+      "date": "2026-04-19",
+      "notes": "",
       "cat": "travaux",
       "title": "Journée rangement agence — préparer zone travaux / zone activité",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 0,
+      "aiAdvice": "# Avis sur \"Journée rangement agence\"\n\n**Priorité justifiée** : Correcte en haute. Une agence propre et organisée est indispensable avant travaux (sécurité, efficacité) et renforce l'image rebranding auprès des clients/collaborateurs.\n\n**Dépendances critiques** :\n- Doit précéder immédiatement les travaux intérieurs (sinon perte de 2-3 jours de chantier)\n- Peut se chevaucher avec commandes mobilier/signalétique neuve si zones bien délimitées\n\n**Recommandation** : \nProgrammer cette journée **48-72h avant le démarrage effectif des travaux**. Faire participer équipe + prestataire travaux (tour de site commun pour éviter mauvaises surprises). Créer 3 zones clairement identifiées : stockage temporaire / poubelle / zone activité préservée. Prévoir 1 personne coordinatrice à temps plein ce jour-là.\n\n*Note* : Si travaux commencent cette semaine, **c'est urgent** - à faire en priorité 1."
     },
     {
-      "id": "task_1776685259820_3",
+      "id": "task_1776600686595_3",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
+      "date": "2026-04-20",
       "notes": "Préparer les murs avant l'arrivée de M. Condor.",
       "cat": "travaux",
       "title": "Décrocher tous les éléments muraux (télé, cadres…)",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 5
     },
     {
-      "id": "task_1776685259820_4",
+      "id": "task_1776600686595_4",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
+      "date": "2026-04-20",
       "notes": "Lui demander ce dont il a besoin pour commencer.",
       "cat": "travaux",
-      "title": "Valider avec M. Condor la date de début des travaux",
+      "title": "Valider avec M. Condor la date de début des travaux, planifier les travaux et budget",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 3,
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": ""
     },
     {
-      "id": "task_1776685259820_5",
+      "id": "task_1776600686595_5",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -97,7 +111,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_6",
+      "id": "task_1776600686595_6",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -113,7 +127,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_7",
+      "id": "task_1776600686595_7",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -129,7 +143,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_8",
+      "id": "task_1776600686595_8",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -145,7 +159,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_9",
+      "id": "task_1776600686595_9",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -161,9 +175,9 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_10",
+      "id": "task_1776600686595_10",
       "validated": 0,
-      "devis": 0,
+      "devis": 250,
       "acompte": 0,
       "paid": 0,
       "url": "",
@@ -174,10 +188,16 @@
       "title": "Remplacer meuble vasque + vasque WC",
       "priority": "moyenne",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 250,
+      "priceReal": 280,
+      "supplier": ""
     },
     {
-      "id": "task_1776685259820_11",
+      "id": "task_1776600686595_11",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -193,7 +213,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_12",
+      "id": "task_1776600686595_12",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -209,7 +229,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_13",
+      "id": "task_1776600686595_13",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -225,7 +245,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_14",
+      "id": "task_1776600686595_14",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -241,7 +261,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_15",
+      "id": "task_1776600686595_15",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -257,7 +277,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_16",
+      "id": "task_1776600686595_16",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -273,7 +293,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_17",
+      "id": "task_1776600686595_17",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -289,7 +309,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_18",
+      "id": "task_1776600686595_18",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -305,7 +325,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_19",
+      "id": "task_1776600686595_19",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -321,7 +341,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_20",
+      "id": "task_1776600686595_20",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -334,10 +354,11 @@
       "title": "Connecteurs radiateur électrique compatibles Alexa",
       "priority": "basse",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "aiAdvice": "# Avis sur \"Connecteurs radiateur électrique compatibles Alexa\"\n\n**Priorité : À réduire ou déprogrammer**\n\nCette tâche n'a **aucun lien** avec un rebranding immobilier. Elle relève d'une gestion opérationnelle de biens ou d'équipements, non d'une restructuration d'agence. \n\n**Recommandation :** \n- Vérifier si c'est un équipement du showroom/bureau → traiter en gestion des locaux, pas en projet rebranding\n- Sinon, **déprogrammer** et la renvoyer au responsable maintenance/patrimoine immobilier\n- Focus rebranding : identité visuelle, site web, communication commerciale, formation équipe\n\n**Action immédiate :** Clarifier l'origine de cette tâche lors du prochain point projet pour éviter la dilution des efforts."
     },
     {
-      "id": "task_1776685259820_21",
+      "id": "task_1776600686595_21",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -353,7 +374,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_22",
+      "id": "task_1776600686595_22",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -369,7 +390,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_23",
+      "id": "task_1776600686595_23",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -385,7 +406,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_24",
+      "id": "task_1776600686595_24",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -401,7 +422,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_25",
+      "id": "task_1776600686595_25",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -417,7 +438,7 @@
       "type": "idee"
     },
     {
-      "id": "task_1776685259820_26",
+      "id": "task_1776600686595_26",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -433,7 +454,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_27",
+      "id": "task_1776600686595_27",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -449,7 +470,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_28",
+      "id": "task_1776600686595_28",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -465,7 +486,7 @@
       "type": "idee"
     },
     {
-      "id": "task_1776685259820_29",
+      "id": "task_1776600686595_29",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -481,7 +502,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_30",
+      "id": "task_1776600686595_30",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -497,7 +518,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_31",
+      "id": "task_1776600686595_31",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -513,7 +534,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_32",
+      "id": "task_1776600686595_32",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -529,7 +550,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_33",
+      "id": "task_1776600686595_33",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -545,7 +566,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_34",
+      "id": "task_1776600686595_34",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -553,15 +574,21 @@
       "url": "",
       "image": "",
       "date": "",
-      "notes": "Acheter éléments taille maison de poupée sur Temu. Relooking couleurs #252848 et rouge.",
+      "notes": "Acheter éléments taille maison de poupée sur Temu. Relooking couleurs #252848 et rouge.\n\nAcheter des chutes ou des petits bouts de Vinyles ou carreaux pvc imitation parquet, ou sol de cuisine\n\nMini impression 3D\n\nhttps://www.temu.com/fr/mini-carrelage-au-grain-de-bois-r%C3%A9aliste-accessoires-d--diy-%C3%A0-verrouillages-automatiques-marron--%C3%A9chelle-1-12-plancher-en--durable-pour-diorama-et-paysagistes-miniatures-maisonsnettes--artisanale-textur%C3%A9-facile-monture-g-601102867471684.html?_oak_name_id=1594183711627119249&_oak_mp_inf=EMS6jtey1ogBGhZnb29kc19pdmgwdWJfcmVjb21tZW5kIN309%2F3ZMw%3D%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Fopen%2Faa2a94c37ffd434c8d77cad9e2e5c118-goods.jpeg&spec_gallery_id=419850&refer_page_sn=10032&freesia_scene=11&_oak_freesia_scene=11&_oak_rec_ext_1=ODYx&_oak_gallery_order=305404810%2C638689993%2C189793351%2C485665013%2C1802274188&refer_page_el_sn=200444&ab_scene=1&enable_vqr=0&_x_sessn_id=m0fhufbgb2&refer_page_name=goods&refer_page_id=10032_1776501520394_ed0ktp1fwv\n\n\nhttps://www.temu.com/fr/mini-carrelage-au-grain-de-bois-r%C3%A9aliste-accessoires-d--diy-%C3%A0-verrouillages-automatiques-marron--%C3%A9chelle-1-12-plancher-en--durable-pour-diorama-et-paysagistes-miniatures-maisonsnettes--artisanale-textur%C3%A9-facile-monture-g-601102867471684.html?_oak_name_id=1594183711627119249&_oak_mp_inf=EMS6jtey1ogBGhZnb29kc19pdmgwdWJfcmVjb21tZW5kIN309%2F3ZMw%3D%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Fopen%2Faa2a94c37ffd434c8d77cad9e2e5c118-goods.jpeg&spec_gallery_id=419850&refer_page_sn=10032&freesia_scene=11&_oak_freesia_scene=11&_oak_rec_ext_1=ODYx&_oak_gallery_order=305404810%2C638689993%2C189793351%2C485665013%2C1802274188&refer_page_el_sn=200444&ab_scene=1&enable_vqr=0&_x_sessn_id=m0fhufbgb2&refer_page_name=goods&refer_page_id=10032_1776501520394_ed0ktp1fwv\n\n\nhttps://www.temu.com/fr/canap%C3%A9-double-blanc-miniature-pour-maison-de-poup%C3%A9e-meuble-d-espace--mini-d%C3%A9coration-douce-d%C3%A9coration-de--g-605771999864325.html?_oak_mp_inf=EIXM98ak3okBGiA0OWEwODY3OWU5YzA0OTUxOWM5MzhkODIxMjk0ZmRlMCCQ3Pb92TM%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F0cbd2089-7872-4192-a565-10de04ad6764.jpg&spec_gallery_id=34816468200&refer_page_sn=10009&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MzAw&_oak_gallery_order=1748646772%2C997461574%2C52073067%2C751136876%2C846878232&search_key=maquette%20maison%20int%C3%A9rieur&refer_page_el_sn=200049&ab_scene=1&enable_vqr=0&refer_page_name=search_result&refer_page_id=10009_1776501489536_7uxieqr8mf&_x_sessn_id=m0fhufbgb2&is_back=1",
       "cat": "decoration",
       "title": "Redesigner la maison de poupée aux couleurs Douard",
       "priority": "basse",
       "status": "todo",
-      "type": "idee"
+      "type": "idee",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": ""
     },
     {
-      "id": "task_1776685259820_35",
+      "id": "task_1776600686595_35",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -577,7 +604,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_36",
+      "id": "task_1776600686595_36",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -593,7 +620,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_37",
+      "id": "task_1776600686595_37",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -609,7 +636,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_38",
+      "id": "task_1776600686595_38",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -625,7 +652,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_39",
+      "id": "task_1776600686595_39",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -641,7 +668,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_40",
+      "id": "task_1776600686595_40",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -657,7 +684,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_41",
+      "id": "task_1776600686595_41",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -673,7 +700,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_42",
+      "id": "task_1776600686595_42",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -689,7 +716,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_43",
+      "id": "task_1776600686595_43",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -705,7 +732,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_44",
+      "id": "task_1776600686595_44",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -721,7 +748,7 @@
       "type": "achat"
     },
     {
-      "id": "task_1776685259820_45",
+      "id": "task_1776600686595_45",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -737,7 +764,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_46",
+      "id": "task_1776600686595_46",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -753,7 +780,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_47",
+      "id": "task_1776600686595_47",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -769,7 +796,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_48",
+      "id": "task_1776600686595_48",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -777,15 +804,21 @@
       "url": "",
       "image": "",
       "date": "",
-      "notes": "",
+      "notes": "Interface administrateur pour les collaborateurs et le superviseur de l'agence ligne, on y retrouvera plusieurs outils qui seront aujourd'hui utilisé à travers d'autres logiciels comme mon ligne, on y retrouvera des bases de connaissances des process ainsi que des tutoriel\nIl y aura un système de suivi des ventes et de suivi des locations, même si Gigi est indépendant du site principal de l'Agence Douard, il doit quand même pouvoir accéder à sa base de données des biens immobiliers afin de les exploiter dans le système ligne, il aurait une question de collaborer à quelle heure et évidemment des des droits des collaborateurs suivant leur statut négociateurs, administrateur assistant et les services\nVoici certaines fonctionnalités vendues : un cahier des messages, intelligent qui reprend le modèle de modèle, mais en beaucoup plus adapté et avec une gestion des tâches type focus\nUne gestion du tableau des clés sur le modèle demandé avec la possibilité de fonctionnalité en existant sur mon des comme un système d'alerte, l'historique, la photo des clés, l'analyse paria du groupe des clés\nDans la section communication communication et pour y avoir une section dédiée aux écrans en vitrine simplement pour indiquer quelles sont les biens qui sont actuellement diffusés sur chacun des télés. Cette section permettra de comptabiliser et d'indiquer mon nombre d'heures de jours, la durée et nous avons fait de diffusion pour chaque bien. Il pourra avoir un lien pour aller directement accéder à l'interface de Vitrine Media en indiquant bien que si un changement fait sûr, faut penser à le faire sur interfaces do immobilier\nPour l'administrateur il pourrait avoir des fonctions de statique beaucoup plus évoluées avec un suivi de chiffre d'affaires et un système de calcul des commissions de collaborateurs\nJe pourrais aussi essayer au fur et à mesure d'intégrer certains fichiers, celles que j'utilise pour les adapter sur une interface Web en ligne comme par exemple le suivi des payes et ce qui me permettrait de pouvoir les payes dès collaborateurs directement dans leur compte Agence\nDans la partie des ventes voir si celle-ci doit également me servir d'aide comptabilité de suivi des factures que ce soit des factures d'honoraires ou des factures de dépense\nIl devra quand même y avoir un système de sécurité assez poussé car il va y avoir des données sensibles. Ligne nous pourrions progressivement intégrer toutes les ventes qui ont eu lieu par le passé, soit manuellement, soit avec un import Excel, ce qui nous permettrait de pouvoir faire des campagnes de communication ciblée sur des Proprietaire suivants, le nombre d'années de l'opération\nÀ terme lia devra régulièrement proposé au superviseur des façons d'exploiter les données pour la communication\nToujours dans la partie communication, il sera alors intéressant d'intégrer un calendrier des parution à prévoir sur les réseaux sociaux ainsi que les différents liens pour pouvoir liker me donner son avis.\n\nToujours dans la partie communication, il pourrait y avoir une gestion des panneaux pour indiquer quels sont les panneaux en stock et où est-ce qu'il se trouve ?\n\n",
       "cat": "crm",
       "title": "Choisir et configurer le CRM intégré au site",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": ""
     },
     {
-      "id": "task_1776685259820_49",
+      "id": "task_1776600686595_49",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -801,7 +834,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_50",
+      "id": "task_1776600686595_50",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -817,7 +850,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_51",
+      "id": "task_1776600686595_51",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -833,7 +866,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_52",
+      "id": "task_1776600686595_52",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -849,7 +882,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_53",
+      "id": "task_1776600686595_53",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -859,13 +892,14 @@
       "date": "",
       "notes": "",
       "cat": "transition",
-      "title": "Migrer les mails Stéphane Plaza vers @douardimmobilier.com",
+      "title": "Migrer les mails Stéphane Plaza vers @douardimmobilier.com ou @agencedouard",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "aiAdvice": ""
     },
     {
-      "id": "task_1776685259820_54",
+      "id": "task_1776600686595_54",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -881,7 +915,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_55",
+      "id": "task_1776600686595_55",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -897,7 +931,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_56",
+      "id": "task_1776600686595_56",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -913,7 +947,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_57",
+      "id": "task_1776600686595_57",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -929,7 +963,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_58",
+      "id": "task_1776600686595_58",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -945,7 +979,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_59",
+      "id": "task_1776600686595_59",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -961,7 +995,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_60",
+      "id": "task_1776600686595_60",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -977,7 +1011,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_61",
+      "id": "task_1776600686595_61",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -993,7 +1027,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_62",
+      "id": "task_1776600686595_62",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1009,7 +1043,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_63",
+      "id": "task_1776600686595_63",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1025,7 +1059,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_64",
+      "id": "task_1776600686595_64",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1041,7 +1075,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_65",
+      "id": "task_1776600686595_65",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1057,7 +1091,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_66",
+      "id": "task_1776600686595_66",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1073,7 +1107,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_67",
+      "id": "task_1776600686595_67",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1089,7 +1123,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_68",
+      "id": "task_1776600686595_68",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1105,7 +1139,7 @@
       "type": "tache"
     },
     {
-      "id": "task_1776685259820_69",
+      "id": "task_1776600686595_69",
       "validated": 0,
       "devis": 0,
       "acompte": 0,
@@ -1119,8 +1153,494 @@
       "priority": "moyenne",
       "status": "todo",
       "type": "tache"
+    },
+    {
+      "id": "task_1776604337576",
+      "title": "Tester les différents Bleus et valider",
+      "cat": "travaux",
+      "type": "tache",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "2026-04-22",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0,
+      "order": 1
+    },
+    {
+      "id": "task_1776611013412",
+      "title": "Acheter Classeurs couleurs bleu des classeurs couleurs rouge",
+      "aiAdvice": "# Avis sur la tâche : Classeurs couleurs\n\n**Priorité : À relever en MOYENNE**\n\nBien que classée \"basse\", cette tâche revêt une importance symbolique dans un rebranding complet. Les classeurs sont visibles au quotidien par clients et équipe – ils doivent refléter la nouvelle identité visuelle (charte graphique, palette de couleurs officielles).\n\n**Points critiques :**\n- **Dépendances** : Valider d'abord la charte graphique finalisée et les couleurs officielles Douard Immobilier\n- **Risque** : Acheter avant validation = gaspillage si les teintes ne correspondent pas à l'identité finale\n\n**Recommandation :**\nTraiter cette tâche **immédiatement après validation de la charte graphique** (étape préalable prioritaire). Confier l'achat à une personne référente qualité + budgéter globalement pour éviter les achats partiels. Cela fait partie des \"petits détails\" qui professionnalisent le rebranding auprès des clients.",
+      "cat": "amenagement",
+      "type": "achat",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776617701533",
+      "title": "Envoyer mail à la base client",
+      "aiAdvice": "# Avis - Tâche \"Mail base client\"\n\n**Priorité : À ÉLEVER en HAUTE**\nCette action est critique pour un rebranding : c'est votre première impression auprès de la base existante. Un mail tardif ou mal coordonné crée de la confusion et risque de perdre des prospects.\n\n**Dépendances identifiées :**\n- ✓ Site finalisé et testé (sinon lien mort = crédibilité perdue)\n- ✓ Charte graphique validée (cohérence visuelle rebranding)\n- ✓ FAQ anticipée sur \"pourquoi ce changement\" (clients Stéphane Plaza désorientés)\n\n**Recommandation concrète :**\nEnvoyer **dans les 48-72h après le lancement du site**, en trois vagues segmentées (vendeurs actifs → contacts tièdes → archives). Sujet accrocheur : *\"Douard Immobilier : même équipe, nouvelle énergie\"* pour rassurer sur la continuité. Incluez un lien trackable pour mesurer l'engagement = données précieuses post-rebranding.",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "2026-05-04",
+      "validated": 0,
+      "notes": "venez visiter notre nouveau site Internet, dopé à l'intelligence artificielle, Agence à la fois humaine, historique et moderne",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776618593422",
+      "title": "Créer un agent ia DOUARD virtuel : avec eleven labs ou autres : baremes , infos, rdv, estimation,",
+      "aiAdvice": "# Avis - Agent IA DOUARD Virtuel\n\n**Priorité : À passer en HAUTE** (pas moyenne)\n\nCet agent est un élément clé du rebranding – il incarne la nouvelle identité DOUARD et modernise l'image face à l'héritage Stéphane Plaza. C'est un vecteur de différenciation immédiate.\n\n**Dépendances critiques :**\n- Brand guidelines finalisées (tone, visuels, valeurs)\n- Base de données complète (barrèmes, process estimation, disponibilités RDV)\n- Intégration CRM/agenda existant\n- Scripts de qualification clients validés\n\n**Recommandation :**\nLancer en parallèle du lancement du nouveau site/identité visuelle (pas après). Commencer par l'MVP : agent téléphonique IA (Eleven Labs) pour prise de RDV + infos basiques. Estimation et barrèmes détaillés en phase 2. **Timing : démarrage immédiat si rebranding lancé, livraison 4-6 semaines.**",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "--- Analyse IA (19/04/2026 19:09) ---\n# Avis - Agent IA DOUARD Virtuel\n\n**Priorité : À passer en HAUTE** (pas moyenne)\n\nCet agent est un élément clé du rebranding – il incarne la nouvelle identité DOUARD et modernise l'image face à l'héritage Stéphane Plaza. C'est un vecteur de différenciation immédiate.\n\n**Dépendances critiques :**\n- Brand guidelines finalisées (tone, visuels, valeurs)\n- Base de données complète (barrèmes, process estimation, disponibilités RDV)\n- Intégration CRM/agenda existant\n- Scripts de qualification clients validés\n\n**Recommandation :**\nLancer en parallèle du lancement du nouveau site/identité visuelle (pas après). Commencer par l'MVP : agent téléphonique IA (Eleven Labs) pour prise de RDV + infos basiques. Estimation et barrèmes détaillés en phase 2. **Timing : démarrage immédiat si rebranding lancé, livraison 4-6 semaines.**",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776618780208",
+      "title": "Animation sur affiche vtrine sur écran : Vitrine affiche fixe traveling avant sur la photo balade dans la maison a travers transition photo + videos",
+      "aiAdvice": "# Avis sur la tâche \"Animation vitrine écran\"\n\n**Priorité à **AUGMENTER à HAUTE*** : Cette animation vitrine est un élément clé du rebranding pour créer une première impression impactante chez les clients. C'est votre face visible quotidienne.\n\n**Dépendances critiques** : \n- Charte graphique finalisée (logo, couleurs Douard)\n- Photos/vidéos de propriétés en qualité professionnelle\n- Identité visuelle consolidée avant production\n\n**Recommandation** : \n1. Traiter **après validation de la charte complète** (ne pas refaire 2x)\n2. Externaliser auprès d'un prestataire motion design local pour gain de temps\n3. Commencer par 2-3 propriétés phares (ROI immédiat) plutôt que d'attendre l'exhaustivité\n4. Planning : **3-4 semaines** (conception + itérations)\n\n**Enjeu stratégique** : La vitrine sera votre meilleur argument de transition vis-à-vis de la clientèle historique Stéphane Plaza.",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "--- Analyse IA (19/04/2026 19:13) ---\n# Avis sur la tâche \"Animation vitrine écran\"\n\n**Priorité à **AUGMENTER à HAUTE*** : Cette animation vitrine est un élément clé du rebranding pour créer une première impression impactante chez les clients. C'est votre face visible quotidienne.\n\n**Dépendances critiques** : \n- Charte graphique finalisée (logo, couleurs Douard)\n- Photos/vidéos de propriétés en qualité professionnelle\n- Identité visuelle consolidée avant production\n\n**Recommandation** : \n1. Traiter **après validation de la charte complète** (ne pas refaire 2x)\n2. Externaliser auprès d'un prestataire motion design local pour gain de temps\n3. Commencer par 2-3 propriétés phares (ROI immédiat) plutôt que d'attendre l'exhaustivité\n4. Planning : **3-4 semaines** (conception + itérations)\n\n**Enjeu stratégique** : La vitrine sera votre meilleur argument de transition vis-à-vis de la clientèle historique Stéphane Plaza.",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776618843189",
+      "title": "TRANSFERT des inscirtption des sites du mail plaza vers mail douard",
+      "aiAdvice": "",
+      "cat": "crm",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "tache",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "COMMENCER LE TRANSFERT DES MAILS\n\nDROPBOX\n1PASSWORD\nIMPOT.GOUV\nETC\n",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776618941440",
+      "title": "Faire des panneaux avec un avatar généré par lia, une jeune fille qui dit vous voulez visiter avec moi",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776618990873",
+      "title": "Panneau avec formes pré découpe",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619012340",
+      "title": "reprendre la coccinelle en or créé avec ChatGPT, et voir qui pourrait la construire va fabriquer une vingtaine d'exemplaires afin d' offrir aux clients",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619040040",
+      "title": "Bonne visite nouvelle génération sur un fichier HTML avec possibilité de prendre une photo souvenir et éventuellement de donner un AVIS et une interprétation avec qui qui permet un avis Google automatique et avec un accord de consentement des personnes pour une utilisation sur nos outils commerciaux en respectant la RGPD",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619092457",
+      "title": "creer adresse gmail de récupération des anciens mails de chez plaza",
+      "aiAdvice": "",
+      "cat": "crm",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "tache",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619115346",
+      "title": "trouver photos papa et transformer en carte postale prise de note",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619154741",
+      "title": "Flyer : Exploiter fichier vente - Saviez vous que nous avions vendu votre maison",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "Votre maison a été vendue entre parenthèses au recto\nAu verso Pat panique elle avait été vendue Arnaud service il y a quelques temps. Nous avons la possibilité de mettre à jour les informations de valeur de votre bien et l'exposant déjà les éléments nécessaires. N'hésitez pas à prendre contact avec lui.\n\nou bien : \n\nJe voulais vous dire que j'ai vendu votre maison, vous ne me croyez pas : QR CODE",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619194041",
+      "title": "BLOC NOTE BLEU MARINE AVEC STICKERS DOUARD ROUGE DERRIÈRE",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619209346",
+      "title": "Upscaler image douard avec coccinelle rouge",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619280710",
+      "title": "panneau de vente unique adapte avec qr code special",
+      "aiAdvice": "",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "idee",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776619328645",
+      "title": "Faire une landing page douard en attente du lancement du site",
+      "aiAdvice": "# Avis sur la Landing Page Douard\n\n**Priorité justifiée ✓** – La landing page est un élément critique du rebranding : elle sécurise le trafic existant (clients, prospects, partenaires) pendant la transition et renforce la nouvelle identité en ligne immédiatement.\n\n**Dépendances clés :**\n- Charte graphique finalisée (logo, couleurs, typographie)\n- Messaging rebranding validé (positionnement, promesse client)\n- Plan de redirection des URLs anciennes (Stéphane Plaza → Douard)\n\n**Recommandation opérationnelle :**\nLancer cette tâche **en parallèle** du site complet (ne pas l'attendre). Scope léger : présentation Douard + formulaire de contact + CTA clairs. À publier dès que charte + messaging sont validés. Cela gagne 2-3 semaines et offre une vitrine visible dès maintenant.",
+      "cat": "cat_op_ration_de_communi_3529",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "tache",
+      "priority": "haute",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "--- Analyse IA (19/04/2026 19:22) ---\n# Avis sur la Landing Page Douard\n\n**Priorité justifiée ✓** – La landing page est un élément critique du rebranding : elle sécurise le trafic existant (clients, prospects, partenaires) pendant la transition et renforce la nouvelle identité en ligne immédiatement.\n\n**Dépendances clés :**\n- Charte graphique finalisée (logo, couleurs, typographie)\n- Messaging rebranding validé (positionnement, promesse client)\n- Plan de redirection des URLs anciennes (Stéphane Plaza → Douard)\n\n**Recommandation opérationnelle :**\nLancer cette tâche **en parallèle** du site complet (ne pas l'attendre). Scope léger : présentation Douard + formulaire de contact + CTA clairs. À publier dès que charte + messaging sont validés. Cela gagne 2-3 semaines et offre une vitrine visible dès maintenant.",
+      "url": "",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
+    },
+    {
+      "id": "task_1776685820457",
+      "title": "Plaque de Dibond personnalisé pour poteaux façade",
+      "aiAdvice": "",
+      "cat": "enseigne",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 300,
+      "priceReal": 0,
+      "supplier": "",
+      "type": "achat",
+      "priority": "moyenne",
+      "status": "todo",
+      "date": "",
+      "validated": 0,
+      "notes": "",
+      "url": "https://www.fulfiller.com/panneau-aluminium.html?utm_source=google&utm_medium=cpc&utm_campaign=22149524048&utm_term=&gad_source=1&gad_campaignid=22153392646&gbraid=0AAAAAotuzvDK0kg394U9Uuh0hnqY1kWp5&gclid=CjwKCAjwnZfPBhAGEiwAzg-VzEmLcNwRZp5Mkher_WWMvqsld93T5W3578KV3OYUQH6P4hXLuwDx5RoCIIsQAvD_BwE",
+      "image": "",
+      "devis": 0,
+      "acompte": 0,
+      "paid": 0
     }
   ],
-  "subcats": {},
-  "customCats": []
+  "subcats": {
+    "decoration": {
+      "_groups": [
+        "Signalétique et branding",
+        "Éléments 3D et volumétrie",
+        "Revêtements muraux",
+        "Mobilier et accessoires",
+        "Contenu historique et storytelling"
+      ],
+      "task_1776600686595_27": "Signalétique et branding",
+      "task_1776600686595_28": "Signalétique et branding",
+      "task_1776600686595_29": "Mobilier et accessoires",
+      "task_1776600686595_30": "Revêtements muraux",
+      "task_1776600686595_31": "Éléments 3D et volumétrie",
+      "task_1776600686595_32": "Éléments 3D et volumétrie",
+      "task_1776600686595_33": "Éléments 3D et volumétrie",
+      "task_1776600686595_34": "Mobilier et accessoires",
+      "task_1776600686595_35": "Mobilier et accessoires",
+      "task_1776600686595_36": "Contenu historique et storytelling"
+    },
+    "travaux": {
+      "_groups": [
+        "Préparation & Planification",
+        "Préparation du chantier",
+        "Achats & Commandes",
+        "Design & Validation"
+      ],
+      "task_1776600686595_0": "Préparation & Planification",
+      "task_1776600686595_1": "Achats & Commandes",
+      "task_1776600686595_2": "Préparation du chantier",
+      "task_1776600686595_3": "Préparation du chantier",
+      "task_1776600686595_4": "Préparation & Planification",
+      "task_1776604337576": "Design & Validation"
+    },
+    "siteweb": {
+      "_groups": [
+        "Infrastructure & Domaine",
+        "Configuration Technique",
+        "Développement & Design"
+      ],
+      "task_1776600686595_45": "Infrastructure & Domaine",
+      "task_1776600686595_46": "Configuration Technique",
+      "task_1776600686595_47": "Développement & Design"
+    },
+    "enseigne": {
+      "_groups": [
+        "Validation technique",
+        "Paiements et approvisionnement",
+        "Travaux de finition"
+      ],
+      "task_1776600686595_5": "Validation technique",
+      "task_1776600686595_6": "Validation technique",
+      "task_1776600686595_7": "Paiements et approvisionnement",
+      "task_1776600686595_8": "Travaux de finition",
+      "task_1776600686595_9": "Travaux de finition"
+    },
+    "amenagement": {
+      "_groups": [
+        "Sanitaires & Plomberie",
+        "Éclairage",
+        "Mobilier & Rangement",
+        "Revêtements & Finitions",
+        "Accessoires & Options"
+      ],
+      "task_1776600686595_10": "Sanitaires & Plomberie",
+      "task_1776600686595_11": "Sanitaires & Plomberie",
+      "task_1776600686595_12": "Mobilier & Rangement",
+      "task_1776600686595_13": "Éclairage",
+      "task_1776600686595_14": "Éclairage",
+      "task_1776600686595_15": "Éclairage",
+      "task_1776600686595_16": "Éclairage",
+      "task_1776600686595_17": "Éclairage",
+      "task_1776600686595_18": "Éclairage",
+      "task_1776600686595_19": "Revêtements & Finitions",
+      "task_1776600686595_20": "Accessoires & Options",
+      "task_1776600686595_21": "Mobilier & Rangement",
+      "task_1776600686595_22": "Mobilier & Rangement",
+      "task_1776600686595_23": "Accessoires & Options",
+      "task_1776600686595_24": "Mobilier & Rangement",
+      "task_1776600686595_25": "Accessoires & Options",
+      "task_1776600686595_26": "Accessoires & Options"
+    },
+    "transition": {
+      "_groups": [
+        "Données & Identité Numérique",
+        "Mandats & Contrats Clients",
+        "Présence Web & Annonces"
+      ],
+      "task_1776600686595_53": "Données & Identité Numérique",
+      "task_1776600686595_54": "Présence Web & Annonces",
+      "task_1776600686595_55": "Présence Web & Annonces",
+      "task_1776600686595_56": "Mandats & Contrats Clients",
+      "task_1776600686595_57": "Mandats & Contrats Clients"
+    }
+  },
+  "customCats": [
+    {
+      "id": "cat_op_ration_de_communi_3529",
+      "label": "Opération de Communication",
+      "icon": "📌"
+    }
+  ]
 }
