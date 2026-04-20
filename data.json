@@ -1143,6 +1143,19 @@
       "paid": 0
     }
   ],
-  "subcats": {},
+  "subcats": {
+    "travaux": {
+      "_groups": [
+        "Commandes & Approvisionnement",
+        "Préparation du chantier",
+        "Validation & Planification"
+      ],
+      "task_1776620266385_0": "Validation & Planification",
+      "task_1776620266385_1": "Commandes & Approvisionnement",
+      "task_1776620266385_2": "Préparation du chantier",
+      "task_1776620266385_3": "Préparation du chantier",
+      "task_1776620266385_4": "Validation & Planification"
+    }
+  },
   "customCats": []
 }
