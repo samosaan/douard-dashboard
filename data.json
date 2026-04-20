@@ -202,7 +202,13 @@
       "title": "Changer cuvette WC",
       "priority": "moyenne",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 66.58,
+      "priceReal": 66.58,
+      "supplier": ""
     },
     {
       "id": "task_1776620266385_12",
@@ -1181,7 +1187,7 @@
       "task_1776620266385_4": "Validation & Planification"
     }
   },
-  "savedAt": 1776688964684,
+  "savedAt": 1776688993634,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
