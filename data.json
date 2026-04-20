@@ -108,7 +108,8 @@
       "title": "Valider présence du monogramme \"D\" rouge sur le bandeau enseigne",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 0
     },
     {
       "id": "task_1776600686595_6",
@@ -124,7 +125,8 @@
       "title": "Valider la forme et les dimensions de l'enseigne drapeau (totem)",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 1
     },
     {
       "id": "task_1776600686595_7",
@@ -140,7 +142,8 @@
       "title": "Verser l'acompte à Joseph pour démarrer",
       "priority": "haute",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "order": 2
     },
     {
       "id": "task_1776600686595_8",
@@ -162,7 +165,8 @@
       "quantity": 1,
       "priceEst": 0,
       "priceReal": 0,
-      "supplier": ""
+      "supplier": "",
+      "order": 4
     },
     {
       "id": "task_1776600686595_9",
@@ -184,7 +188,8 @@
       "quantity": 1,
       "priceEst": 0,
       "priceReal": 0,
-      "supplier": ""
+      "supplier": "",
+      "order": 5
     },
     {
       "id": "task_1776600686595_10",
@@ -1550,7 +1555,8 @@
       "image": "",
       "devis": 0,
       "acompte": 0,
-      "paid": 0
+      "paid": 0,
+      "order": 3
     },
     {
       "id": "task_1776686101924",
@@ -1572,7 +1578,8 @@
       "image": "",
       "devis": 0,
       "acompte": 0,
-      "paid": 0
+      "paid": 0,
+      "order": 6
     }
   ],
   "subcats": {
