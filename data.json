@@ -196,7 +196,7 @@
       "devis": 0,
       "acompte": 0,
       "paid": 0,
-      "url": "",
+      "url": "https://tohaadesign.com/",
       "image": "",
       "date": "",
       "notes": "",
@@ -204,7 +204,13 @@
       "title": "Changer cuvette WC",
       "priority": "moyenne",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 66.58,
+      "priceReal": 66.58,
+      "supplier": ""
     },
     {
       "id": "task_1776600686595_12",
@@ -1607,6 +1613,7 @@
       "task_1776600686595_57": "Mandats & Contrats Clients"
     }
   },
+  "savedAt": 1776690041731,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
