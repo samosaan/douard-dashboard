@@ -548,13 +548,19 @@
       "paid": 0,
       "url": "",
       "image": "",
-      "date": "",
+      "date": "2026-04-24",
       "notes": "Brief à transmettre à Joseph (lettres volumétriques).",
       "cat": "decoration",
       "title": "Logo volumétrique 3D à poser sur mur salon",
       "priority": "haute",
       "status": "todo",
-      "type": "achat"
+      "type": "achat",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": ""
     },
     {
       "id": "task_1776620266385_34",
