@@ -172,7 +172,7 @@
       "devis": 0,
       "acompte": 0,
       "paid": 0,
-      "url": "",
+      "url": "https://tohaadesign.com/eu/fr/?gad_source=1&gad_campaignid=17385002393&gbraid=0AAAAACwl7_bTVcEsHaTRPp3XPqzuL3xub&gclid=CjwKCAjwnZfPBhAGEiwAzg-VzJfvT_674j2w8Mo-DYHlq_OOUK_m4R3PKNLhjZw2NWcjqS23tu1SjhoCFSIQAvD_BwE",
       "image": "",
       "date": "",
       "notes": "",
@@ -186,7 +186,7 @@
       "quantity": 1,
       "priceEst": 300,
       "priceReal": 0,
-      "supplier": ""
+      "supplier": "Tohaa Design"
     },
     {
       "id": "task_1776620266385_11",
@@ -1181,7 +1181,7 @@
       "task_1776620266385_4": "Validation & Planification"
     }
   },
-  "savedAt": 1776688893653,
+  "savedAt": 1776688964684,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
