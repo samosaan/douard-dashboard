@@ -77,7 +77,7 @@
       "cat": "travaux",
       "title": "Valider avec M. Condor la date de début des travaux",
       "priority": "haute",
-      "status": "todo",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1207,7 +1207,7 @@
       "task_1776620266385_4": "Validation & Planification"
     }
   },
-  "savedAt": 1776725181462,
+  "savedAt": 1777238830555,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
