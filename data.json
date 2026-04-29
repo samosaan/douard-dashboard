@@ -739,7 +739,7 @@
       "cat": "siteweb",
       "title": "Enregistrer le domaine douardimmobilier.com",
       "priority": "haute",
-      "status": "todo",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1217,7 +1217,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1777473234048,
+  "savedAt": 1777473239898,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
