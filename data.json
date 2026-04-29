@@ -13,7 +13,7 @@
       "cat": "travaux",
       "title": "Finaliser le projet détaillé pièce par pièce avant brief artisan",
       "priority": "haute",
-      "status": "progress",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1209,7 +1209,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1777472998483,
+  "savedAt": 1777473004335,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
