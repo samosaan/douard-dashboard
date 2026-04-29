@@ -1149,28 +1149,6 @@
       "paid": 0
     },
     {
-      "id": "task_1776690636099",
-      "title": "Faire un tableau de l'agence Douard à l'ancienne",
-      "aiAdvice": "",
-      "cat": "travaux",
-      "purchaseStatus": "commander",
-      "quantity": 1,
-      "priceEst": 0,
-      "priceReal": 0,
-      "supplier": "",
-      "type": "idee",
-      "priority": "moyenne",
-      "status": "todo",
-      "date": "",
-      "validated": 0,
-      "notes": "",
-      "url": "",
-      "image": "",
-      "devis": 0,
-      "acompte": 0,
-      "paid": 0
-    },
-    {
       "id": "task_1776725181462",
       "title": "Plante Artificielle Salon",
       "aiAdvice": "",
@@ -1232,7 +1210,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1777473122534,
+  "savedAt": 1777473142405,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
