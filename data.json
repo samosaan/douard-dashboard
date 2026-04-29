@@ -45,7 +45,7 @@
       "cat": "travaux",
       "title": "Journée rangement agence — préparer zone travaux / zone activité",
       "priority": "haute",
-      "status": "todo",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1209,7 +1209,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1777473004335,
+  "savedAt": 1777473008318,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
