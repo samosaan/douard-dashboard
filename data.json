@@ -109,7 +109,7 @@
       "cat": "enseigne",
       "title": "Valider la forme et les dimensions de l'enseigne drapeau (totem)",
       "priority": "haute",
-      "status": "todo",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1217,7 +1217,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1777474080568,
+  "savedAt": 1778011845452,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
