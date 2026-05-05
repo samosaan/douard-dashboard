@@ -125,7 +125,7 @@
       "cat": "enseigne",
       "title": "Verser l'acompte à Joseph pour démarrer",
       "priority": "haute",
-      "status": "todo",
+      "status": "done",
       "type": "tache"
     },
     {
@@ -1217,7 +1217,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1778011845452,
+  "savedAt": 1778011848302,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
