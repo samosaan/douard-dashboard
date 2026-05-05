@@ -153,12 +153,19 @@
       "url": "",
       "image": "",
       "date": "",
-      "notes": "À confirmer selon l'état des menuiseries après rangement.",
+      "notes": "À confirmer selon l'état des menuiseries après rangement.\nhttps://www.fulfiller.com/",
       "cat": "enseigne",
-      "title": "Décider de la reprise peinture sur les menuiseries",
+      "title": "Décider de la reprise peinture sur les menuiseries ou pose de dibond",
       "priority": "moyenne",
       "status": "todo",
-      "type": "tache"
+      "type": "tache",
+      "aiAdvice": "",
+      "purchaseStatus": "commander",
+      "quantity": 1,
+      "priceEst": 0,
+      "priceReal": 0,
+      "supplier": "",
+      "productRefs": []
     },
     {
       "id": "task_1776620266385_10",
@@ -1217,7 +1224,7 @@
       "task_1776690636099": "Créativité et décoration"
     }
   },
-  "savedAt": 1778011848302,
+  "savedAt": 1778012516881,
   "customCats": [
     {
       "id": "cat_op_ration_de_communi_3529",
