@@ -1,6 +1,12 @@
 {
   "tasks": [],
   "subcats": {},
-  "savedAt": 1778154664874,
-  "customCats": []
+  "savedAt": 1778154719006,
+  "customCats": [
+    {
+      "id": "cat_op_ration_de_communi_3529",
+      "label": "Opération de Communication",
+      "icon": "📌"
+    }
+  ]
 }
